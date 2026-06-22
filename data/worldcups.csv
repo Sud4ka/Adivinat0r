@@ -1,0 +1,968 @@
+year,stage,home_team,away_team,home_goals,away_goals,host,home_continent,away_continent
+1930,Group Stage,Argentina,France,1,0,Uruguay,South America,Europe
+1930,Group Stage,Chile,Mexico,3,0,Uruguay,South America,North America
+1930,Group Stage,France,Mexico,4,1,Uruguay,Europe,North America
+1930,Group Stage,Chile,France,1,0,Uruguay,South America,Europe
+1930,Group Stage,Argentina,Mexico,6,3,Uruguay,South America,North America
+1930,Group Stage,Chile,Argentina,1,3,Uruguay,South America,South America
+1930,Group Stage,Yugoslavia,Brazil,2,1,Uruguay,Europe,South America
+1930,Group Stage,Yugoslavia,Bolivia,4,0,Uruguay,Europe,South America
+1930,Group Stage,Brazil,Bolivia,4,0,Uruguay,South America,South America
+1930,Group Stage,Romania,Peru,3,1,Uruguay,Europe,South America
+1930,Group Stage,Uruguay,Peru,1,0,Uruguay,South America,South America
+1930,Group Stage,Romania,Uruguay,0,4,Uruguay,Europe,South America
+1930,Semi-finals,Argentina,United States,6,1,Uruguay,South America,North America
+1930,Semi-finals,Uruguay,Yugoslavia,6,1,Uruguay,South America,Europe
+1930,Final,Uruguay,Argentina,4,2,Uruguay,South America,South America
+1930,Third place,United States,Yugoslavia,3,1,Uruguay,North America,Europe
+1934,Round of 16,Italy,United States,7,1,Italy,Europe,North America
+1934,Round of 16,Spain,Brazil,3,1,Italy,Europe,South America
+1934,Round of 16,Austria,France,3,2,Italy,Europe,Europe
+1934,Round of 16,Hungary,Egypt,4,2,Italy,Europe,Africa
+1934,Round of 16,Czechoslovakia,Romania,2,1,Italy,Europe,Europe
+1934,Round of 16,Switzerland,Netherlands,3,2,Italy,Europe,Europe
+1934,Round of 16,Germany,Belgium,5,2,Italy,Europe,Europe
+1934,Round of 16,Sweden,Argentina,3,2,Italy,Europe,South America
+1934,Quarter-finals,Italy,Spain,1,1,Italy,Europe,Europe
+1934,Quarter-finals,Italy,Spain,1,0,Italy,Europe,Europe
+1934,Quarter-finals,Austria,Hungary,2,1,Italy,Europe,Europe
+1934,Quarter-finals,Czechoslovakia,Switzerland,3,2,Italy,Europe,Europe
+1934,Quarter-finals,Germany,Sweden,2,1,Italy,Europe,Europe
+1934,Semi-finals,Italy,Austria,1,0,Italy,Europe,Europe
+1934,Semi-finals,Czechoslovakia,Germany,3,1,Italy,Europe,Europe
+1934,Final,Italy,Czechoslovakia,2,1,Italy,Europe,Europe
+1934,Third place,Germany,Austria,3,2,Italy,Europe,Europe
+1938,Round of 16,France,Belgium,3,1,France,Europe,Europe
+1938,Round of 16,Germany,Switzerland,1,1,France,Europe,Europe
+1938,Round of 16,Switzerland,Germany,4,2,France,Europe,Europe
+1938,Round of 16,Sweden,Austria,1,0,France,Europe,Europe
+1938,Round of 16,Cuba,Romania,3,3,France,North America,Europe
+1938,Round of 16,Romania,Cuba,1,2,France,Europe,North America
+1938,Round of 16,Hungary,Indonesia,6,0,France,Europe,Asia
+1938,Round of 16,Italy,Norway,2,1,France,Europe,Europe
+1938,Round of 16,Brazil,Poland,6,5,France,South America,Europe
+1938,Round of 16,Czechoslovakia,Netherlands,3,0,France,Europe,Europe
+1938,Quarter-finals,France,Italy,1,3,France,Europe,Europe
+1938,Quarter-finals,Brazil,Czechoslovakia,1,1,France,South America,Europe
+1938,Quarter-finals,Czechoslovakia,Brazil,1,2,France,Europe,South America
+1938,Quarter-finals,Sweden,Cuba,8,0,France,Europe,North America
+1938,Quarter-finals,Hungary,Switzerland,2,0,France,Europe,Europe
+1938,Semi-finals,Italy,Brazil,2,1,France,Europe,South America
+1938,Semi-finals,Hungary,Sweden,5,1,France,Europe,Europe
+1938,Final,Italy,Hungary,4,2,France,Europe,Europe
+1938,Third place,Brazil,Sweden,4,2,France,South America,Europe
+1950,Group Stage,Brazil,Mexico,4,0,Brazil,South America,North America
+1950,Group Stage,Yugoslavia,Switzerland,3,0,Brazil,Europe,Europe
+1950,Group Stage,Brazil,Switzerland,2,2,Brazil,South America,Europe
+1950,Group Stage,Brazil,Yugoslavia,2,0,Brazil,South America,Europe
+1950,Group Stage,Switzerland,Mexico,2,1,Brazil,Europe,North America
+1950,Group Stage,Mexico,Yugoslavia,1,4,Brazil,North America,Europe
+1950,Group Stage,Spain,England,1,0,Brazil,Europe,Europe
+1950,Group Stage,Chile,United States,5,2,Brazil,South America,North America
+1950,Group Stage,Spain,Chile,2,0,Brazil,Europe,South America
+1950,Group Stage,United States,England,1,0,Brazil,North America,Europe
+1950,Group Stage,Spain,United States,3,1,Brazil,Europe,North America
+1950,Group Stage,England,Chile,2,0,Brazil,Europe,South America
+1950,Group Stage,Sweden,Italy,3,2,Brazil,Europe,Europe
+1950,Group Stage,Sweden,Paraguay,2,2,Brazil,Europe,South America
+1950,Group Stage,Italy,Paraguay,2,0,Brazil,Europe,South America
+1950,Group Stage,Italy,Sweden,2,3,Brazil,Europe,Europe
+1950,Group Stage,Paraguay,Sweden,2,2,Brazil,South America,Europe
+1950,Group Stage,Uruguay,Bolivia,8,0,Brazil,South America,South America
+1950,Final Round,Brazil,Sweden,7,1,Brazil,South America,Europe
+1950,Final Round,Brazil,Spain,6,1,Brazil,South America,Europe
+1950,Final Round,Uruguay,Spain,2,2,Brazil,South America,Europe
+1950,Final Round,Uruguay,Sweden,3,2,Brazil,South America,Europe
+1950,Final Round,Uruguay,Brazil,2,1,Brazil,South America,South America
+1950,Final Round,Sweden,Spain,3,1,Brazil,Europe,Europe
+1954,Group Stage,Brazil,Mexico,5,0,Switzerland,South America,North America
+1954,Group Stage,Yugoslavia,France,1,0,Switzerland,Europe,Europe
+1954,Group Stage,Brazil,Yugoslavia,1,1,Switzerland,South America,Europe
+1954,Group Stage,France,Mexico,3,2,Switzerland,Europe,North America
+1954,Group Stage,France,Brazil,1,1,Switzerland,Europe,South America
+1954,Group Stage,Yugoslavia,Mexico,1,0,Switzerland,Europe,North America
+1954,Group Stage,West Germany,Turkey,4,1,Switzerland,Europe,Europe
+1954,Group Stage,Hungary,South Korea,9,0,Switzerland,Europe,Asia
+1954,Group Stage,Hungary,West Germany,8,3,Switzerland,Europe,Europe
+1954,Group Stage,Turkey,South Korea,7,0,Switzerland,Europe,Asia
+1954,Group Stage,West Germany,South Korea,3,1,Switzerland,Europe,Asia
+1954,Group Stage,Turkey,Hungary,2,0,Switzerland,Europe,Europe
+1954,Group Stage,Austria,Uruguay,2,0,Switzerland,Europe,South America
+1954,Group Stage,Scotland,Austria,0,1,Switzerland,Europe,Europe
+1954,Group Stage,Uruguay,Scotland,7,0,Switzerland,South America,Europe
+1954,Group Stage,Austria,Scotland,1,0,Switzerland,Europe,Europe
+1954,Group Stage,Uruguay,Austria,1,1,Switzerland,South America,Europe
+1954,Group Stage,Italy,Switzerland,1,2,Switzerland,Europe,Europe
+1954,Group Stage,England,Belgium,4,4,Switzerland,Europe,Europe
+1954,Group Stage,Switzerland,Italy,4,1,Switzerland,Europe,Europe
+1954,Group Stage,England,Switzerland,2,0,Switzerland,Europe,Europe
+1954,Group Stage,Belgium,Italy,1,4,Switzerland,Europe,Europe
+1954,Group Stage,Belgium,England,1,1,Switzerland,Europe,Europe
+1954,Quarter-finals,Austria,Switzerland,7,5,Switzerland,Europe,Europe
+1954,Quarter-finals,West Germany,Yugoslavia,2,0,Switzerland,Europe,Europe
+1954,Quarter-finals,Hungary,Brazil,4,2,Switzerland,Europe,South America
+1954,Quarter-finals,Uruguay,England,4,2,Switzerland,South America,Europe
+1954,Semi-finals,West Germany,Austria,6,1,Switzerland,Europe,Europe
+1954,Semi-finals,Hungary,Uruguay,4,2,Switzerland,Europe,South America
+1954,Final,West Germany,Hungary,3,2,Switzerland,Europe,Europe
+1954,Third place,Austria,Uruguay,3,1,Switzerland,Europe,South America
+1958,Group Stage,Sweden,Mexico,3,0,Sweden,Europe,North America
+1958,Group Stage,Wales,Hungary,1,1,Sweden,Europe,Europe
+1958,Group Stage,Sweden,Wales,2,1,Sweden,Europe,Europe
+1958,Group Stage,Hungary,Mexico,4,0,Sweden,Europe,North America
+1958,Group Stage,Sweden,Hungary,2,1,Sweden,Europe,Europe
+1958,Group Stage,Wales,Mexico,1,1,Sweden,Europe,North America
+1958,Group Stage,West Germany,Argentina,3,1,Sweden,Europe,South America
+1958,Group Stage,Northern Ireland,Czechoslovakia,1,0,Sweden,Europe,Europe
+1958,Group Stage,West Germany,Czechoslovakia,2,2,Sweden,Europe,Europe
+1958,Group Stage,Argentina,Northern Ireland,3,1,Sweden,South America,Europe
+1958,Group Stage,West Germany,Northern Ireland,2,2,Sweden,Europe,Europe
+1958,Group Stage,Czechoslovakia,Argentina,6,1,Sweden,Europe,South America
+1958,Group Stage,France,Paraguay,7,3,Sweden,Europe,South America
+1958,Group Stage,Yugoslavia,Scotland,1,1,Sweden,Europe,Europe
+1958,Group Stage,Yugoslavia,France,3,2,Sweden,Europe,Europe
+1958,Group Stage,Paraguay,Scotland,3,2,Sweden,South America,Europe
+1958,Group Stage,France,Scotland,2,1,Sweden,Europe,Europe
+1958,Group Stage,Yugoslavia,Paraguay,3,3,Sweden,Europe,South America
+1958,Group Stage,Brazil,Austria,3,0,Sweden,South America,Europe
+1958,Group Stage,England,Soviet Union,2,2,Sweden,Europe,Europe
+1958,Group Stage,Soviet Union,Austria,2,0,Sweden,Europe,Europe
+1958,Group Stage,Brazil,England,0,0,Sweden,South America,Europe
+1958,Group Stage,Brazil,Soviet Union,2,0,Sweden,South America,Europe
+1958,Group Stage,England,Austria,2,2,Sweden,Europe,Europe
+1958,Quarter-finals,France,Northern Ireland,4,0,Sweden,Europe,Europe
+1958,Quarter-finals,West Germany,Yugoslavia,1,0,Sweden,Europe,Europe
+1958,Quarter-finals,Sweden,Soviet Union,2,0,Sweden,Europe,Europe
+1958,Quarter-finals,Brazil,Wales,1,0,Sweden,South America,Europe
+1958,Semi-finals,Brazil,France,5,2,Sweden,South America,Europe
+1958,Semi-finals,Sweden,West Germany,3,1,Sweden,Europe,Europe
+1958,Final,Brazil,Sweden,5,2,Sweden,South America,Europe
+1958,Third place,France,West Germany,6,3,Sweden,Europe,Europe
+1962,Group Stage,Brazil,Mexico,2,0,Chile,South America,North America
+1962,Group Stage,Czechoslovakia,Spain,1,0,Chile,Europe,Europe
+1962,Group Stage,Brazil,Czechoslovakia,0,0,Chile,South America,Europe
+1962,Group Stage,Spain,Mexico,1,0,Chile,Europe,North America
+1962,Group Stage,Brazil,Spain,2,1,Chile,South America,Europe
+1962,Group Stage,Czechoslovakia,Mexico,1,0,Chile,Europe,North America
+1962,Group Stage,Chile,Switzerland,3,1,Chile,South America,Europe
+1962,Group Stage,Italy,West Germany,0,0,Chile,Europe,Europe
+1962,Group Stage,Chile,Italy,2,0,Chile,South America,Europe
+1962,Group Stage,West Germany,Switzerland,2,1,Chile,Europe,Europe
+1962,Group Stage,Chile,West Germany,0,2,Chile,South America,Europe
+1962,Group Stage,Italy,Switzerland,3,0,Chile,Europe,Europe
+1962,Group Stage,Hungary,England,2,1,Chile,Europe,Europe
+1962,Group Stage,Argentina,Bulgaria,1,0,Chile,South America,Europe
+1962,Group Stage,Hungary,Bulgaria,6,1,Chile,Europe,Europe
+1962,Group Stage,England,Argentina,3,1,Chile,Europe,South America
+1962,Group Stage,Hungary,Argentina,0,0,Chile,Europe,South America
+1962,Group Stage,England,Bulgaria,0,0,Chile,Europe,Europe
+1962,Group Stage,Soviet Union,Yugoslavia,2,0,Chile,Europe,Europe
+1962,Group Stage,Uruguay,Colombia,2,1,Chile,South America,South America
+1962,Group Stage,Soviet Union,Colombia,4,4,Chile,Europe,South America
+1962,Group Stage,Yugoslavia,Uruguay,3,1,Chile,Europe,South America
+1962,Group Stage,Soviet Union,Uruguay,2,1,Chile,Europe,South America
+1962,Group Stage,Yugoslavia,Colombia,5,0,Chile,Europe,South America
+1962,Quarter-finals,Chile,Soviet Union,2,1,Chile,South America,Europe
+1962,Quarter-finals,Czechoslovakia,Hungary,1,0,Chile,Europe,Europe
+1962,Quarter-finals,Brazil,England,3,1,Chile,South America,Europe
+1962,Quarter-finals,Yugoslavia,West Germany,1,0,Chile,Europe,Europe
+1962,Semi-finals,Czechoslovakia,Yugoslavia,3,1,Chile,Europe,Europe
+1962,Semi-finals,Brazil,Chile,4,2,Chile,South America,South America
+1962,Final,Brazil,Czechoslovakia,3,1,Chile,South America,Europe
+1962,Third place,Chile,Yugoslavia,1,0,Chile,South America,Europe
+1966,Group Stage,England,Uruguay,0,0,England,Europe,South America
+1966,Group Stage,Mexico,France,1,1,England,North America,Europe
+1966,Group Stage,England,Mexico,2,0,England,Europe,North America
+1966,Group Stage,Uruguay,France,2,1,England,South America,Europe
+1966,Group Stage,England,France,2,0,England,Europe,Europe
+1966,Group Stage,Uruguay,Mexico,0,0,England,South America,North America
+1966,Group Stage,West Germany,Argentina,5,0,England,Europe,South America
+1966,Group Stage,Spain,Switzerland,2,1,England,Europe,Europe
+1966,Group Stage,West Germany,Spain,2,1,England,Europe,Europe
+1966,Group Stage,Argentina,Switzerland,2,0,England,South America,Europe
+1966,Group Stage,West Germany,Switzerland,0,0,England,Europe,Europe
+1966,Group Stage,Argentina,Spain,1,0,England,South America,Europe
+1966,Group Stage,Portugal,Hungary,3,1,England,Europe,Europe
+1966,Group Stage,Brazil,Bulgaria,2,0,England,South America,Europe
+1966,Group Stage,Hungary,Brazil,3,1,England,Europe,South America
+1966,Group Stage,Portugal,Brazil,3,0,England,Europe,South America
+1966,Group Stage,Portugal,Bulgaria,3,0,England,Europe,Europe
+1966,Group Stage,Hungary,Bulgaria,3,1,England,Europe,Europe
+1966,Group Stage,Soviet Union,Italy,1,0,England,Europe,Europe
+1966,Group Stage,North Korea,Chile,1,1,England,Asia,South America
+1966,Group Stage,Soviet Union,Chile,1,1,England,Europe,South America
+1966,Group Stage,Italy,Chile,2,0,England,Europe,South America
+1966,Group Stage,Soviet Union,North Korea,3,0,England,Europe,Asia
+1966,Group Stage,Italy,North Korea,0,1,England,Europe,Asia
+1966,Quarter-finals,England,Argentina,1,0,England,Europe,South America
+1966,Quarter-finals,Soviet Union,Hungary,2,1,England,Europe,Europe
+1966,Quarter-finals,Portugal,North Korea,5,3,England,Europe,Asia
+1966,Quarter-finals,West Germany,Uruguay,4,0,England,Europe,South America
+1966,Semi-finals,England,Portugal,2,1,England,Europe,Europe
+1966,Semi-finals,West Germany,Soviet Union,2,1,England,Europe,Europe
+1966,Final,England,West Germany,4,2,England,Europe,Europe
+1966,Third place,Portugal,Soviet Union,2,1,England,Europe,Europe
+1970,Group Stage,Mexico,Soviet Union,0,0,Mexico,North America,Europe
+1970,Group Stage,Belgium,El Salvador,3,0,Mexico,Europe,North America
+1970,Group Stage,Soviet Union,Belgium,4,1,Mexico,Europe,Europe
+1970,Group Stage,Mexico,El Salvador,4,0,Mexico,North America,North America
+1970,Group Stage,Soviet Union,El Salvador,2,0,Mexico,Europe,North America
+1970,Group Stage,Mexico,Belgium,1,0,Mexico,North America,Europe
+1970,Group Stage,Italy,Sweden,1,0,Mexico,Europe,Europe
+1970,Group Stage,Uruguay,Israel,2,0,Mexico,South America,Asia
+1970,Group Stage,Uruguay,Italy,0,0,Mexico,South America,Europe
+1970,Group Stage,Sweden,Israel,1,1,Mexico,Europe,Asia
+1970,Group Stage,Italy,Israel,1,0,Mexico,Europe,Asia
+1970,Group Stage,Uruguay,Sweden,0,1,Mexico,South America,Europe
+1970,Group Stage,Brazil,Czechoslovakia,4,1,Mexico,South America,Europe
+1970,Group Stage,Romania,England,0,1,Mexico,Europe,Europe
+1970,Group Stage,Romania,Czechoslovakia,2,1,Mexico,Europe,Europe
+1970,Group Stage,Brazil,England,1,0,Mexico,South America,Europe
+1970,Group Stage,Brazil,Romania,3,2,Mexico,South America,Europe
+1970,Group Stage,England,Czechoslovakia,1,0,Mexico,Europe,Europe
+1970,Group Stage,West Germany,Morocco,2,1,Mexico,Europe,Africa
+1970,Group Stage,Peru,Bulgaria,3,2,Mexico,South America,Europe
+1970,Group Stage,West Germany,Bulgaria,5,2,Mexico,Europe,Europe
+1970,Group Stage,Peru,Morocco,3,0,Mexico,South America,Africa
+1970,Group Stage,West Germany,Peru,3,1,Mexico,Europe,South America
+1970,Group Stage,Bulgaria,Morocco,1,1,Mexico,Europe,Africa
+1970,Quarter-finals,Italy,Mexico,4,1,Mexico,Europe,North America
+1970,Quarter-finals,Brazil,Peru,4,2,Mexico,South America,South America
+1970,Quarter-finals,Uruguay,Soviet Union,1,0,Mexico,South America,Europe
+1970,Quarter-finals,West Germany,England,3,2,Mexico,Europe,Europe
+1970,Semi-finals,Italy,West Germany,4,3,Mexico,Europe,Europe
+1970,Semi-finals,Brazil,Uruguay,3,1,Mexico,South America,South America
+1970,Final,Brazil,Italy,4,1,Mexico,South America,Europe
+1970,Third place,West Germany,Uruguay,1,0,Mexico,Europe,South America
+1974,Group Stage,West Germany,Chile,1,0,West Germany,Europe,South America
+1974,Group Stage,East Germany,Australia,2,0,West Germany,Europe,Oceania
+1974,Group Stage,Chile,Australia,0,0,West Germany,South America,Oceania
+1974,Group Stage,East Germany,Chile,1,1,West Germany,Europe,South America
+1974,Group Stage,West Germany,Australia,3,0,West Germany,Europe,Oceania
+1974,Group Stage,West Germany,East Germany,0,1,West Germany,Europe,Europe
+1974,Group Stage,Brazil,Yugoslavia,0,0,West Germany,South America,Europe
+1974,Group Stage,Zaire,Scotland,0,2,West Germany,Africa,Europe
+1974,Group Stage,Brazil,Scotland,0,0,West Germany,South America,Europe
+1974,Group Stage,Yugoslavia,Zaire,9,0,West Germany,Europe,Africa
+1974,Group Stage,Brazil,Zaire,3,0,West Germany,South America,Africa
+1974,Group Stage,Scotland,Yugoslavia,1,1,West Germany,Europe,Europe
+1974,Group Stage,Netherlands,Uruguay,2,0,West Germany,Europe,South America
+1974,Group Stage,Sweden,Bulgaria,0,0,West Germany,Europe,Europe
+1974,Group Stage,Netherlands,Sweden,0,0,West Germany,Europe,Europe
+1974,Group Stage,Bulgaria,Uruguay,1,1,West Germany,Europe,South America
+1974,Group Stage,Netherlands,Bulgaria,4,1,West Germany,Europe,Europe
+1974,Group Stage,Sweden,Uruguay,3,0,West Germany,Europe,South America
+1974,Group Stage,Italy,Poland,1,2,West Germany,Europe,Europe
+1974,Group Stage,Argentina,Haiti,3,1,West Germany,South America,North America
+1974,Group Stage,Argentina,Poland,2,3,West Germany,South America,Europe
+1974,Group Stage,Italy,Haiti,3,1,West Germany,Europe,North America
+1974,Group Stage,Argentina,Italy,1,1,West Germany,South America,Europe
+1974,Group Stage,Poland,Haiti,7,0,West Germany,Europe,North America
+1974,Second Group Stage,Brazil,East Germany,1,0,West Germany,South America,Europe
+1974,Second Group Stage,Netherlands,Argentina,4,0,West Germany,Europe,South America
+1974,Second Group Stage,Netherlands,East Germany,2,0,West Germany,Europe,Europe
+1974,Second Group Stage,Brazil,Argentina,2,1,West Germany,South America,South America
+1974,Second Group Stage,Netherlands,Brazil,2,0,West Germany,Europe,South America
+1974,Second Group Stage,Argentina,East Germany,1,1,West Germany,South America,Europe
+1974,Second Group Stage,Yugoslavia,West Germany,0,2,West Germany,Europe,Europe
+1974,Second Group Stage,Sweden,Poland,0,1,West Germany,Europe,Europe
+1974,Second Group Stage,West Germany,Sweden,4,1,West Germany,Europe,Europe
+1974,Second Group Stage,Poland,Yugoslavia,2,1,West Germany,Europe,Europe
+1974,Second Group Stage,West Germany,Poland,1,0,West Germany,Europe,Europe
+1974,Second Group Stage,Sweden,Yugoslavia,2,1,West Germany,Europe,Europe
+1974,Final,West Germany,Netherlands,2,1,West Germany,Europe,Europe
+1974,Third place,Brazil,Poland,0,1,West Germany,South America,Europe
+1978,Group Stage,Argentina,Hungary,2,1,Argentina,South America,Europe
+1978,Group Stage,Italy,France,2,1,Argentina,Europe,Europe
+1978,Group Stage,Argentina,France,2,1,Argentina,South America,Europe
+1978,Group Stage,Italy,Hungary,3,1,Argentina,Europe,Europe
+1978,Group Stage,Argentina,Italy,0,1,Argentina,South America,Europe
+1978,Group Stage,France,Hungary,3,1,Argentina,Europe,Europe
+1978,Group Stage,West Germany,Poland,0,0,Argentina,Europe,Europe
+1978,Group Stage,Tunisia,Mexico,3,1,Argentina,Africa,North America
+1978,Group Stage,West Germany,Mexico,6,0,Argentina,Europe,North America
+1978,Group Stage,Poland,Tunisia,1,0,Argentina,Europe,Africa
+1978,Group Stage,West Germany,Tunisia,0,0,Argentina,Europe,Africa
+1978,Group Stage,Poland,Mexico,3,1,Argentina,Europe,North America
+1978,Group Stage,Austria,Spain,2,1,Argentina,Europe,Europe
+1978,Group Stage,Brazil,Sweden,1,1,Argentina,South America,Europe
+1978,Group Stage,Brazil,Spain,0,0,Argentina,South America,Europe
+1978,Group Stage,Austria,Sweden,1,0,Argentina,Europe,Europe
+1978,Group Stage,Brazil,Austria,1,0,Argentina,South America,Europe
+1978,Group Stage,Spain,Sweden,1,0,Argentina,Europe,Europe
+1978,Group Stage,Peru,Scotland,3,1,Argentina,South America,Europe
+1978,Group Stage,Netherlands,Iran,3,0,Argentina,Europe,Asia
+1978,Group Stage,Scotland,Iran,1,1,Argentina,Europe,Asia
+1978,Group Stage,Netherlands,Peru,0,0,Argentina,Europe,South America
+1978,Group Stage,Netherlands,Scotland,2,3,Argentina,Europe,Europe
+1978,Group Stage,Peru,Iran,4,1,Argentina,South America,Asia
+1978,Second Group Stage,Austria,Netherlands,1,1,Argentina,Europe,Europe
+1978,Second Group Stage,Italy,West Germany,0,0,Argentina,Europe,Europe
+1978,Second Group Stage,Netherlands,West Germany,2,2,Argentina,Europe,Europe
+1978,Second Group Stage,Italy,Austria,1,0,Argentina,Europe,Europe
+1978,Second Group Stage,Netherlands,Italy,2,1,Argentina,Europe,Europe
+1978,Second Group Stage,West Germany,Austria,2,3,Argentina,Europe,Europe
+1978,Second Group Stage,Brazil,Peru,3,0,Argentina,South America,South America
+1978,Second Group Stage,Argentina,Poland,2,0,Argentina,South America,Europe
+1978,Second Group Stage,Poland,Peru,1,0,Argentina,Europe,South America
+1978,Second Group Stage,Argentina,Brazil,0,0,Argentina,South America,South America
+1978,Second Group Stage,Brazil,Poland,3,1,Argentina,South America,Europe
+1978,Second Group Stage,Argentina,Peru,6,0,Argentina,South America,South America
+1978,Final,Argentina,Netherlands,3,1,Argentina,South America,Europe
+1978,Third place,Brazil,Italy,2,1,Argentina,South America,Europe
+1982,Group Stage,Italy,Poland,0,0,Spain,Europe,Europe
+1982,Group Stage,Peru,Cameroon,0,0,Spain,South America,Africa
+1982,Group Stage,Italy,Peru,1,1,Spain,Europe,South America
+1982,Group Stage,Poland,Cameroon,0,0,Spain,Europe,Africa
+1982,Group Stage,Poland,Peru,5,1,Spain,Europe,South America
+1982,Group Stage,Italy,Cameroon,1,1,Spain,Europe,Africa
+1982,Group Stage,West Germany,Algeria,1,2,Spain,Europe,Africa
+1982,Group Stage,Chile,Austria,0,1,Spain,South America,Europe
+1982,Group Stage,West Germany,Chile,4,1,Spain,Europe,South America
+1982,Group Stage,Austria,Algeria,2,0,Spain,Europe,Africa
+1982,Group Stage,West Germany,Austria,1,0,Spain,Europe,Europe
+1982,Group Stage,Chile,Algeria,2,3,Spain,South America,Africa
+1982,Group Stage,Belgium,Argentina,1,0,Spain,Europe,South America
+1982,Group Stage,Hungary,El Salvador,10,1,Spain,Europe,North America
+1982,Group Stage,Argentina,Hungary,4,1,Spain,South America,Europe
+1982,Group Stage,Belgium,El Salvador,1,0,Spain,Europe,North America
+1982,Group Stage,Belgium,Hungary,1,1,Spain,Europe,Europe
+1982,Group Stage,Argentina,El Salvador,2,0,Spain,South America,North America
+1982,Group Stage,England,France,3,1,Spain,Europe,Europe
+1982,Group Stage,Czechoslovakia,Kuwait,1,1,Spain,Europe,Asia
+1982,Group Stage,England,Czechoslovakia,2,0,Spain,Europe,Europe
+1982,Group Stage,France,Kuwait,4,1,Spain,Europe,Asia
+1982,Group Stage,England,Kuwait,1,0,Spain,Europe,Asia
+1982,Group Stage,France,Czechoslovakia,1,1,Spain,Europe,Europe
+1982,Group Stage,Spain,Honduras,1,1,Spain,Europe,North America
+1982,Group Stage,Yugoslavia,Northern Ireland,0,0,Spain,Europe,Europe
+1982,Group Stage,Spain,Yugoslavia,2,1,Spain,Europe,Europe
+1982,Group Stage,Northern Ireland,Honduras,1,1,Spain,Europe,North America
+1982,Group Stage,Spain,Northern Ireland,0,1,Spain,Europe,Europe
+1982,Group Stage,Yugoslavia,Honduras,1,0,Spain,Europe,North America
+1982,Group Stage,Brazil,Soviet Union,2,1,Spain,South America,Europe
+1982,Group Stage,Scotland,New Zealand,5,2,Spain,Europe,Oceania
+1982,Group Stage,Brazil,Scotland,4,1,Spain,South America,Europe
+1982,Group Stage,Soviet Union,New Zealand,3,0,Spain,Europe,Oceania
+1982,Group Stage,Brazil,New Zealand,4,0,Spain,South America,Oceania
+1982,Group Stage,Soviet Union,Scotland,2,2,Spain,Europe,Europe
+1982,Second Group Stage,Poland,Belgium,3,0,Spain,Europe,Europe
+1982,Second Group Stage,Belgium,Soviet Union,0,1,Spain,Europe,Europe
+1982,Second Group Stage,Poland,Soviet Union,0,0,Spain,Europe,Europe
+1982,Second Group Stage,West Germany,England,0,0,Spain,Europe,Europe
+1982,Second Group Stage,West Germany,Spain,2,1,Spain,Europe,Europe
+1982,Second Group Stage,England,Spain,0,0,Spain,Europe,Europe
+1982,Second Group Stage,Italy,Argentina,2,1,Spain,Europe,South America
+1982,Second Group Stage,Argentina,Brazil,1,3,Spain,South America,South America
+1982,Second Group Stage,Italy,Brazil,3,2,Spain,Europe,South America
+1982,Second Group Stage,France,Austria,1,0,Spain,Europe,Europe
+1982,Second Group Stage,Austria,Northern Ireland,2,2,Spain,Europe,Europe
+1982,Second Group Stage,France,Northern Ireland,4,1,Spain,Europe,Europe
+1982,Semi-finals,Italy,Poland,2,0,Spain,Europe,Europe
+1982,Semi-finals,West Germany,France,3,3,Spain,Europe,Europe
+1982,Final,Italy,West Germany,3,1,Spain,Europe,Europe
+1982,Third place,Poland,France,3,2,Spain,Europe,Europe
+1986,Group Stage,Bulgaria,Italy,1,1,Mexico,Europe,Europe
+1986,Group Stage,Argentina,South Korea,3,1,Mexico,South America,Asia
+1986,Group Stage,Italy,South Korea,3,2,Mexico,Europe,Asia
+1986,Group Stage,Argentina,Bulgaria,2,0,Mexico,South America,Europe
+1986,Group Stage,Argentina,Italy,1,1,Mexico,South America,Europe
+1986,Group Stage,Bulgaria,South Korea,1,1,Mexico,Europe,Asia
+1986,Group Stage,Mexico,Belgium,2,1,Mexico,North America,Europe
+1986,Group Stage,Paraguay,Iraq,1,0,Mexico,South America,Asia
+1986,Group Stage,Mexico,Paraguay,1,1,Mexico,North America,South America
+1986,Group Stage,Belgium,Iraq,2,1,Mexico,Europe,Asia
+1986,Group Stage,Mexico,Iraq,1,0,Mexico,North America,Asia
+1986,Group Stage,Belgium,Paraguay,2,2,Mexico,Europe,South America
+1986,Group Stage,France,Canada,1,0,Mexico,Europe,North America
+1986,Group Stage,Soviet Union,Hungary,6,0,Mexico,Europe,Europe
+1986,Group Stage,Soviet Union,France,1,1,Mexico,Europe,Europe
+1986,Group Stage,Hungary,Canada,2,0,Mexico,Europe,North America
+1986,Group Stage,France,Hungary,3,0,Mexico,Europe,Europe
+1986,Group Stage,Soviet Union,Canada,2,0,Mexico,Europe,North America
+1986,Group Stage,Brazil,Spain,1,0,Mexico,South America,Europe
+1986,Group Stage,Northern Ireland,Algeria,1,1,Mexico,Europe,Africa
+1986,Group Stage,Brazil,Northern Ireland,3,0,Mexico,South America,Europe
+1986,Group Stage,Spain,Algeria,2,1,Mexico,Europe,Africa
+1986,Group Stage,Brazil,Algeria,1,0,Mexico,South America,Africa
+1986,Group Stage,Spain,Northern Ireland,3,0,Mexico,Europe,Europe
+1986,Group Stage,West Germany,Uruguay,1,1,Mexico,Europe,South America
+1986,Group Stage,Denmark,Scotland,1,0,Mexico,Europe,Europe
+1986,Group Stage,Denmark,Uruguay,6,1,Mexico,Europe,South America
+1986,Group Stage,West Germany,Scotland,2,1,Mexico,Europe,Europe
+1986,Group Stage,West Germany,Denmark,0,2,Mexico,Europe,Europe
+1986,Group Stage,Scotland,Uruguay,0,0,Mexico,Europe,South America
+1986,Group Stage,England,Portugal,0,1,Mexico,Europe,Europe
+1986,Group Stage,Morocco,Poland,0,0,Mexico,Africa,Europe
+1986,Group Stage,England,Morocco,0,0,Mexico,Europe,Africa
+1986,Group Stage,Portugal,Poland,1,0,Mexico,Europe,Europe
+1986,Group Stage,England,Poland,3,0,Mexico,Europe,Europe
+1986,Group Stage,Portugal,Morocco,1,3,Mexico,Europe,Africa
+1986,Round of 16,Mexico,Bulgaria,2,0,Mexico,North America,Europe
+1986,Round of 16,Soviet Union,Belgium,3,4,Mexico,Europe,Europe
+1986,Round of 16,Brazil,Poland,4,0,Mexico,South America,Europe
+1986,Round of 16,Argentina,Uruguay,1,0,Mexico,South America,South America
+1986,Round of 16,Italy,France,0,2,Mexico,Europe,Europe
+1986,Round of 16,Morocco,West Germany,0,1,Mexico,Africa,Europe
+1986,Round of 16,England,Paraguay,3,0,Mexico,Europe,South America
+1986,Round of 16,Denmark,Spain,1,5,Mexico,Europe,Europe
+1986,Quarter-finals,Brazil,France,1,1,Mexico,South America,Europe
+1986,Quarter-finals,Mexico,West Germany,0,0,Mexico,North America,Europe
+1986,Quarter-finals,Argentina,England,2,1,Mexico,South America,Europe
+1986,Quarter-finals,Spain,Belgium,1,1,Mexico,Europe,Europe
+1986,Semi-finals,France,West Germany,0,2,Mexico,Europe,Europe
+1986,Semi-finals,Argentina,Belgium,2,0,Mexico,South America,Europe
+1986,Final,Argentina,West Germany,3,2,Mexico,South America,Europe
+1986,Third place,France,Belgium,4,2,Mexico,Europe,Europe
+1990,Group Stage,Argentina,Cameroon,0,1,Italy,South America,Africa
+1990,Group Stage,Romania,Soviet Union,2,0,Italy,Europe,Europe
+1990,Group Stage,Argentina,Soviet Union,2,0,Italy,South America,Europe
+1990,Group Stage,Cameroon,Romania,2,1,Italy,Africa,Europe
+1990,Group Stage,Argentina,Romania,1,1,Italy,South America,Europe
+1990,Group Stage,Cameroon,Soviet Union,0,4,Italy,Africa,Europe
+1990,Group Stage,Italy,Austria,1,0,Italy,Europe,Europe
+1990,Group Stage,United States,Czechoslovakia,1,5,Italy,North America,Europe
+1990,Group Stage,Italy,United States,1,0,Italy,Europe,North America
+1990,Group Stage,Austria,Czechoslovakia,0,1,Italy,Europe,Europe
+1990,Group Stage,Italy,Czechoslovakia,2,0,Italy,Europe,Europe
+1990,Group Stage,Austria,United States,2,1,Italy,Europe,North America
+1990,Group Stage,Brazil,Sweden,2,1,Italy,South America,Europe
+1990,Group Stage,Costa Rica,Scotland,1,0,Italy,North America,Europe
+1990,Group Stage,Brazil,Costa Rica,1,0,Italy,South America,North America
+1990,Group Stage,Scotland,Sweden,2,1,Italy,Europe,Europe
+1990,Group Stage,Brazil,Scotland,1,0,Italy,South America,Europe
+1990,Group Stage,Costa Rica,Sweden,2,1,Italy,North America,Europe
+1990,Group Stage,West Germany,Yugoslavia,4,1,Italy,Europe,Europe
+1990,Group Stage,Colombia,United Arab Emirates,2,0,Italy,South America,Asia
+1990,Group Stage,West Germany,Colombia,1,1,Italy,Europe,South America
+1990,Group Stage,Yugoslavia,United Arab Emirates,4,1,Italy,Europe,Asia
+1990,Group Stage,West Germany,United Arab Emirates,5,1,Italy,Europe,Asia
+1990,Group Stage,Yugoslavia,Colombia,1,0,Italy,Europe,South America
+1990,Group Stage,Belgium,South Korea,2,0,Italy,Europe,Asia
+1990,Group Stage,Spain,Uruguay,0,0,Italy,Europe,South America
+1990,Group Stage,Belgium,Uruguay,3,1,Italy,Europe,South America
+1990,Group Stage,Spain,South Korea,3,1,Italy,Europe,Asia
+1990,Group Stage,Belgium,Spain,1,2,Italy,Europe,Europe
+1990,Group Stage,Uruguay,South Korea,1,0,Italy,South America,Asia
+1990,Group Stage,England,Ireland,1,1,Italy,Europe,Europe
+1990,Group Stage,Netherlands,Egypt,1,1,Italy,Europe,Africa
+1990,Group Stage,England,Netherlands,0,0,Italy,Europe,Europe
+1990,Group Stage,Ireland,Egypt,0,0,Italy,Europe,Africa
+1990,Group Stage,England,Egypt,1,0,Italy,Europe,Africa
+1990,Group Stage,Ireland,Netherlands,1,1,Italy,Europe,Europe
+1990,Round of 16,Italy,Uruguay,2,0,Italy,Europe,South America
+1990,Round of 16,Czechoslovakia,Costa Rica,4,1,Italy,Europe,North America
+1990,Round of 16,Cameroon,Colombia,2,1,Italy,Africa,South America
+1990,Round of 16,Argentina,Brazil,1,0,Italy,South America,South America
+1990,Round of 16,West Germany,Netherlands,2,1,Italy,Europe,Europe
+1990,Round of 16,Ireland,Romania,0,0,Italy,Europe,Europe
+1990,Round of 16,Spain,Yugoslavia,1,2,Italy,Europe,Europe
+1990,Round of 16,England,Belgium,1,0,Italy,Europe,Europe
+1990,Quarter-finals,Argentina,Yugoslavia,0,0,Italy,South America,Europe
+1990,Quarter-finals,Italy,Ireland,1,0,Italy,Europe,Europe
+1990,Quarter-finals,Czechoslovakia,West Germany,0,1,Italy,Europe,Europe
+1990,Quarter-finals,Cameroon,England,2,3,Italy,Africa,Europe
+1990,Semi-finals,Italy,Argentina,1,1,Italy,Europe,South America
+1990,Semi-finals,West Germany,England,1,1,Italy,Europe,Europe
+1990,Final,West Germany,Argentina,1,0,Italy,Europe,South America
+1990,Third place,Italy,England,2,1,Italy,Europe,Europe
+1994,Group Stage,Germany,Bolivia,1,0,United States,Europe,South America
+1994,Group Stage,Spain,South Korea,2,2,United States,Europe,Asia
+1994,Group Stage,Germany,Spain,1,1,United States,Europe,Europe
+1994,Group Stage,Bolivia,South Korea,0,0,United States,South America,Asia
+1994,Group Stage,Germany,South Korea,3,2,United States,Europe,Asia
+1994,Group Stage,Bolivia,Spain,1,3,United States,South America,Europe
+1994,Group Stage,Brazil,Russia,2,0,United States,South America,Europe
+1994,Group Stage,Cameroon,Sweden,2,2,United States,Africa,Europe
+1994,Group Stage,Brazil,Cameroon,3,0,United States,South America,Africa
+1994,Group Stage,Sweden,Russia,3,1,United States,Europe,Europe
+1994,Group Stage,Brazil,Sweden,1,1,United States,South America,Europe
+1994,Group Stage,Russia,Cameroon,6,1,United States,Europe,Africa
+1994,Group Stage,Colombia,Romania,1,3,United States,South America,Europe
+1994,Group Stage,Switzerland,United States,1,1,United States,Europe,North America
+1994,Group Stage,Romania,Switzerland,1,4,United States,Europe,Europe
+1994,Group Stage,United States,Colombia,2,1,United States,North America,South America
+1994,Group Stage,United States,Romania,0,1,United States,North America,Europe
+1994,Group Stage,Switzerland,Colombia,0,2,United States,Europe,South America
+1994,Group Stage,Nigeria,Bulgaria,3,0,United States,Africa,Europe
+1994,Group Stage,Argentina,Greece,4,0,United States,South America,Europe
+1994,Group Stage,Argentina,Nigeria,2,1,United States,South America,Africa
+1994,Group Stage,Bulgaria,Greece,4,0,United States,Europe,Europe
+1994,Group Stage,Argentina,Bulgaria,0,2,United States,South America,Europe
+1994,Group Stage,Nigeria,Greece,2,0,United States,Africa,Europe
+1994,Group Stage,Mexico,Norway,0,1,United States,North America,Europe
+1994,Group Stage,Italy,Ireland,0,1,United States,Europe,Europe
+1994,Group Stage,Italy,Norway,1,0,United States,Europe,Europe
+1994,Group Stage,Mexico,Ireland,2,1,United States,North America,Europe
+1994,Group Stage,Italy,Mexico,1,1,United States,Europe,North America
+1994,Group Stage,Ireland,Norway,0,0,United States,Europe,Europe
+1994,Group Stage,Belgium,Morocco,1,0,United States,Europe,Africa
+1994,Group Stage,Netherlands,Saudi Arabia,2,1,United States,Europe,Asia
+1994,Group Stage,Belgium,Netherlands,1,0,United States,Europe,Europe
+1994,Group Stage,Morocco,Saudi Arabia,2,1,United States,Africa,Asia
+1994,Group Stage,Netherlands,Morocco,2,1,United States,Europe,Africa
+1994,Group Stage,Belgium,Saudi Arabia,0,1,United States,Europe,Asia
+1994,Round of 16,Germany,Belgium,3,2,United States,Europe,Europe
+1994,Round of 16,Spain,Switzerland,3,0,United States,Europe,Europe
+1994,Round of 16,Saudi Arabia,Sweden,1,3,United States,Asia,Europe
+1994,Round of 16,Romania,Argentina,3,2,United States,Europe,South America
+1994,Round of 16,Netherlands,Ireland,2,0,United States,Europe,Europe
+1994,Round of 16,Brazil,United States,1,0,United States,South America,North America
+1994,Round of 16,Nigeria,Italy,1,2,United States,Africa,Europe
+1994,Round of 16,Mexico,Bulgaria,1,1,United States,North America,Europe
+1994,Quarter-finals,Italy,Spain,2,1,United States,Europe,Europe
+1994,Quarter-finals,Germany,Bulgaria,1,2,United States,Europe,Europe
+1994,Quarter-finals,Netherlands,Brazil,2,3,United States,Europe,South America
+1994,Quarter-finals,Sweden,Romania,2,2,United States,Europe,Europe
+1994,Semi-finals,Bulgaria,Italy,1,2,United States,Europe,Europe
+1994,Semi-finals,Sweden,Brazil,0,1,United States,Europe,South America
+1994,Final,Brazil,Italy,0,0,United States,South America,Europe
+1994,Third place,Sweden,Bulgaria,4,0,United States,Europe,Europe
+1998,Group Stage,Brazil,Scotland,2,1,France,South America,Europe
+1998,Group Stage,Morocco,Norway,2,2,France,Africa,Europe
+1998,Group Stage,Brazil,Morocco,3,0,France,South America,Africa
+1998,Group Stage,Norway,Scotland,1,1,France,Europe,Europe
+1998,Group Stage,Brazil,Norway,1,2,France,South America,Europe
+1998,Group Stage,Scotland,Morocco,0,3,France,Europe,Africa
+1998,Group Stage,Italy,Chile,2,2,France,Europe,South America
+1998,Group Stage,Austria,Cameroon,1,1,France,Europe,Africa
+1998,Group Stage,Chile,Austria,1,1,France,South America,Europe
+1998,Group Stage,Italy,Cameroon,3,0,France,Europe,Africa
+1998,Group Stage,Italy,Austria,2,1,France,Europe,Europe
+1998,Group Stage,Chile,Cameroon,1,1,France,South America,Africa
+1998,Group Stage,France,South Africa,3,0,France,Europe,Africa
+1998,Group Stage,Denmark,Saudi Arabia,1,0,France,Europe,Asia
+1998,Group Stage,France,Denmark,2,1,France,Europe,Europe
+1998,Group Stage,South Africa,Saudi Arabia,1,1,France,Africa,Asia
+1998,Group Stage,France,Saudi Arabia,4,0,France,Europe,Asia
+1998,Group Stage,Denmark,South Africa,1,1,France,Europe,Africa
+1998,Group Stage,Nigeria,Spain,3,2,France,Africa,Europe
+1998,Group Stage,Paraguay,Bulgaria,0,0,France,South America,Europe
+1998,Group Stage,Nigeria,Bulgaria,1,0,France,Africa,Europe
+1998,Group Stage,Spain,Paraguay,0,0,France,Europe,South America
+1998,Group Stage,Nigeria,Paraguay,1,3,France,Africa,South America
+1998,Group Stage,Spain,Bulgaria,6,1,France,Europe,Europe
+1998,Group Stage,Netherlands,Belgium,0,0,France,Europe,Europe
+1998,Group Stage,South Korea,Mexico,1,3,France,Asia,North America
+1998,Group Stage,Netherlands,South Korea,5,0,France,Europe,Asia
+1998,Group Stage,Mexico,Belgium,2,2,France,North America,Europe
+1998,Group Stage,Netherlands,Mexico,2,2,France,Europe,North America
+1998,Group Stage,Belgium,South Korea,1,1,France,Europe,Asia
+1998,Group Stage,Germany,United States,2,0,France,Europe,North America
+1998,Group Stage,Yugoslavia,Iran,1,0,France,Europe,Asia
+1998,Group Stage,Germany,Yugoslavia,2,2,France,Europe,Europe
+1998,Group Stage,Iran,United States,2,1,France,Asia,North America
+1998,Group Stage,Germany,Iran,2,0,France,Europe,Asia
+1998,Group Stage,Yugoslavia,United States,1,0,France,Europe,North America
+1998,Group Stage,Romania,Colombia,1,0,France,Europe,South America
+1998,Group Stage,England,Tunisia,2,0,France,Europe,Africa
+1998,Group Stage,Romania,England,2,1,France,Europe,Europe
+1998,Group Stage,Colombia,Tunisia,1,0,France,South America,Africa
+1998,Group Stage,England,Colombia,2,0,France,Europe,South America
+1998,Group Stage,Romania,Tunisia,1,1,France,Europe,Africa
+1998,Group Stage,Argentina,Japan,1,0,France,South America,Asia
+1998,Group Stage,Croatia,Jamaica,3,1,France,Europe,North America
+1998,Group Stage,Argentina,Croatia,1,0,France,South America,Europe
+1998,Group Stage,Japan,Jamaica,1,2,France,Asia,North America
+1998,Group Stage,Argentina,Jamaica,5,0,France,South America,North America
+1998,Group Stage,Croatia,Japan,1,0,France,Europe,Asia
+1998,Round of 16,Italy,Norway,1,0,France,Europe,Europe
+1998,Round of 16,Brazil,Chile,4,1,France,South America,South America
+1998,Round of 16,France,Paraguay,1,0,France,Europe,South America
+1998,Round of 16,Nigeria,Denmark,1,4,France,Africa,Europe
+1998,Round of 16,Germany,Mexico,2,1,France,Europe,North America
+1998,Round of 16,Netherlands,Yugoslavia,2,1,France,Europe,Europe
+1998,Round of 16,Romania,Croatia,1,1,France,Europe,Europe
+1998,Round of 16,Argentina,England,2,2,France,South America,Europe
+1998,Quarter-finals,France,Italy,0,0,France,Europe,Europe
+1998,Quarter-finals,Brazil,Denmark,3,2,France,South America,Europe
+1998,Quarter-finals,Netherlands,Argentina,2,1,France,Europe,South America
+1998,Quarter-finals,Germany,Croatia,0,3,France,Europe,Europe
+1998,Semi-finals,Brazil,Netherlands,1,1,France,South America,Europe
+1998,Semi-finals,France,Croatia,2,1,France,Europe,Europe
+1998,Final,France,Brazil,3,0,France,Europe,South America
+1998,Third place,Netherlands,Croatia,1,2,France,Europe,Europe
+2002,Group Stage,Senegal,France,1,0,South Korea,Africa,Europe
+2002,Group Stage,Uruguay,Denmark,1,2,South Korea,South America,Europe
+2002,Group Stage,France,Uruguay,0,0,South Korea,Europe,South America
+2002,Group Stage,Denmark,Senegal,1,1,South Korea,Europe,Africa
+2002,Group Stage,Denmark,France,2,0,South Korea,Europe,Europe
+2002,Group Stage,Senegal,Uruguay,3,3,South Korea,Africa,South America
+2002,Group Stage,Spain,Slovenia,3,1,South Korea,Europe,Europe
+2002,Group Stage,Paraguay,South Africa,2,2,South Korea,South America,Africa
+2002,Group Stage,Spain,Paraguay,3,1,South Korea,Europe,South America
+2002,Group Stage,South Africa,Slovenia,1,0,South Korea,Africa,Europe
+2002,Group Stage,Spain,South Africa,3,2,South Korea,Europe,Africa
+2002,Group Stage,Paraguay,Slovenia,3,1,South Korea,South America,Europe
+2002,Group Stage,Brazil,Turkey,2,1,South Korea,South America,Europe
+2002,Group Stage,China,Costa Rica,0,2,South Korea,Asia,North America
+2002,Group Stage,Brazil,China,4,0,South Korea,South America,Asia
+2002,Group Stage,Costa Rica,Turkey,1,1,South Korea,North America,Europe
+2002,Group Stage,Brazil,Costa Rica,5,2,South Korea,South America,North America
+2002,Group Stage,Turkey,China,3,0,South Korea,Europe,Asia
+2002,Group Stage,South Korea,Poland,2,0,South Korea,Asia,Europe
+2002,Group Stage,United States,Portugal,3,2,South Korea,North America,Europe
+2002,Group Stage,South Korea,United States,1,1,South Korea,Asia,North America
+2002,Group Stage,Portugal,Poland,4,0,South Korea,Europe,Europe
+2002,Group Stage,South Korea,Portugal,1,0,South Korea,Asia,Europe
+2002,Group Stage,United States,Poland,3,1,South Korea,North America,Europe
+2002,Group Stage,Germany,Saudi Arabia,8,0,Japan,Europe,Asia
+2002,Group Stage,Ireland,Cameroon,1,1,Japan,Europe,Africa
+2002,Group Stage,Germany,Ireland,1,1,Japan,Europe,Europe
+2002,Group Stage,Cameroon,Saudi Arabia,1,0,Japan,Africa,Asia
+2002,Group Stage,Germany,Cameroon,2,0,Japan,Europe,Africa
+2002,Group Stage,Ireland,Saudi Arabia,3,0,Japan,Europe,Asia
+2002,Group Stage,England,Sweden,1,1,Japan,Europe,Europe
+2002,Group Stage,Argentina,Nigeria,1,0,Japan,South America,Africa
+2002,Group Stage,England,Argentina,1,0,Japan,Europe,South America
+2002,Group Stage,Sweden,Nigeria,2,1,Japan,Europe,Africa
+2002,Group Stage,Sweden,Argentina,1,1,Japan,Europe,South America
+2002,Group Stage,England,Nigeria,0,0,Japan,Europe,Africa
+2002,Group Stage,Italy,Ecuador,2,0,Japan,Europe,South America
+2002,Group Stage,Croatia,Mexico,0,1,Japan,Europe,North America
+2002,Group Stage,Italy,Croatia,1,2,Japan,Europe,Europe
+2002,Group Stage,Mexico,Ecuador,2,1,Japan,North America,South America
+2002,Group Stage,Italy,Mexico,1,1,Japan,Europe,North America
+2002,Group Stage,Croatia,Ecuador,1,0,Japan,Europe,South America
+2002,Group Stage,Japan,Belgium,2,2,Japan,Asia,Europe
+2002,Group Stage,Russia,Tunisia,2,0,Japan,Europe,Africa
+2002,Group Stage,Japan,Russia,1,0,Japan,Asia,Europe
+2002,Group Stage,Tunisia,Belgium,1,1,Japan,Africa,Europe
+2002,Group Stage,Japan,Tunisia,2,0,Japan,Asia,Africa
+2002,Group Stage,Belgium,Russia,3,2,Japan,Europe,Europe
+2002,Round of 16,Germany,Paraguay,1,0,South Korea,Europe,South America
+2002,Round of 16,Denmark,England,0,3,Japan,Europe,Europe
+2002,Round of 16,Sweden,Senegal,1,2,Japan,Europe,Africa
+2002,Round of 16,Spain,Ireland,1,1,South Korea,Europe,Europe
+2002,Round of 16,Mexico,United States,0,2,South Korea,North America,North America
+2002,Round of 16,Brazil,Belgium,2,0,Japan,South America,Europe
+2002,Round of 16,South Korea,Italy,2,1,South Korea,Asia,Europe
+2002,Round of 16,Japan,Turkey,0,1,Japan,Asia,Europe
+2002,Quarter-finals,England,Brazil,1,2,Japan,Europe,South America
+2002,Quarter-finals,Germany,United States,1,0,South Korea,Europe,North America
+2002,Quarter-finals,South Korea,Spain,0,0,South Korea,Asia,Europe
+2002,Quarter-finals,Senegal,Turkey,0,1,Japan,Africa,Europe
+2002,Semi-finals,Germany,South Korea,1,0,South Korea,Europe,Asia
+2002,Semi-finals,Brazil,Turkey,1,0,Japan,South America,Europe
+2002,Final,Brazil,Germany,2,0,South Korea,South America,Europe
+2002,Third place,South Korea,Turkey,2,3,South Korea,Asia,Europe
+2006,Group Stage,Germany,Costa Rica,4,2,Germany,Europe,North America
+2006,Group Stage,Poland,Ecuador,0,2,Germany,Europe,South America
+2006,Group Stage,Germany,Poland,1,0,Germany,Europe,Europe
+2006,Group Stage,Ecuador,Costa Rica,3,0,Germany,South America,North America
+2006,Group Stage,Germany,Ecuador,3,0,Germany,Europe,South America
+2006,Group Stage,Costa Rica,Poland,1,2,Germany,North America,Europe
+2006,Group Stage,England,Paraguay,1,0,Germany,Europe,South America
+2006,Group Stage,Trinidad and Tobago,Sweden,0,0,Germany,North America,Europe
+2006,Group Stage,England,Trinidad and Tobago,2,0,Germany,Europe,North America
+2006,Group Stage,Sweden,Paraguay,1,0,Germany,Europe,South America
+2006,Group Stage,Sweden,England,2,2,Germany,Europe,Europe
+2006,Group Stage,Paraguay,Trinidad and Tobago,2,0,Germany,South America,North America
+2006,Group Stage,Argentina,Ivory Coast,2,1,Germany,South America,Africa
+2006,Group Stage,Serbia,Netherlands,0,1,Germany,Europe,Europe
+2006,Group Stage,Argentina,Serbia,6,0,Germany,South America,Europe
+2006,Group Stage,Netherlands,Ivory Coast,2,1,Germany,Europe,Africa
+2006,Group Stage,Netherlands,Argentina,0,0,Germany,Europe,South America
+2006,Group Stage,Ivory Coast,Serbia,3,2,Germany,Africa,Europe
+2006,Group Stage,Mexico,Iran,3,1,Germany,North America,Asia
+2006,Group Stage,Angola,Portugal,0,1,Germany,Africa,Europe
+2006,Group Stage,Mexico,Angola,0,0,Germany,North America,Africa
+2006,Group Stage,Portugal,Iran,2,0,Germany,Europe,Asia
+2006,Group Stage,Portugal,Mexico,2,1,Germany,Europe,North America
+2006,Group Stage,Iran,Angola,1,1,Germany,Asia,Africa
+2006,Group Stage,Italy,Ghana,2,0,Germany,Europe,Africa
+2006,Group Stage,Czech Republic,United States,3,0,Germany,Europe,North America
+2006,Group Stage,Italy,Czech Republic,2,0,Germany,Europe,Europe
+2006,Group Stage,Ghana,United States,2,1,Germany,Africa,North America
+2006,Group Stage,Italy,United States,1,1,Germany,Europe,North America
+2006,Group Stage,Ghana,Czech Republic,2,0,Germany,Africa,Europe
+2006,Group Stage,Brazil,Croatia,1,0,Germany,South America,Europe
+2006,Group Stage,Australia,Japan,3,1,Germany,Oceania,Asia
+2006,Group Stage,Brazil,Australia,2,0,Germany,South America,Oceania
+2006,Group Stage,Japan,Croatia,0,0,Germany,Asia,Europe
+2006,Group Stage,Brazil,Japan,4,1,Germany,South America,Asia
+2006,Group Stage,Croatia,Australia,2,2,Germany,Europe,Oceania
+2006,Group Stage,France,Switzerland,0,0,Germany,Europe,Europe
+2006,Group Stage,South Korea,Togo,2,1,Germany,Asia,Africa
+2006,Group Stage,France,South Korea,1,1,Germany,Europe,Asia
+2006,Group Stage,Switzerland,Togo,2,0,Germany,Europe,Africa
+2006,Group Stage,France,Togo,2,0,Germany,Europe,Africa
+2006,Group Stage,Switzerland,South Korea,2,0,Germany,Europe,Asia
+2006,Group Stage,Spain,Ukraine,4,0,Germany,Europe,Europe
+2006,Group Stage,Tunisia,Saudi Arabia,2,2,Germany,Africa,Asia
+2006,Group Stage,Spain,Tunisia,3,1,Germany,Europe,Africa
+2006,Group Stage,Saudi Arabia,Ukraine,0,4,Germany,Asia,Europe
+2006,Group Stage,Spain,Saudi Arabia,1,0,Germany,Europe,Asia
+2006,Group Stage,Tunisia,Ukraine,0,1,Germany,Africa,Europe
+2006,Round of 16,Germany,Sweden,2,0,Germany,Europe,Europe
+2006,Round of 16,Argentina,Mexico,2,1,Germany,South America,North America
+2006,Round of 16,Italy,Australia,1,0,Germany,Europe,Oceania
+2006,Round of 16,Portugal,Netherlands,1,0,Germany,Europe,Europe
+2006,Round of 16,Brazil,Ghana,3,0,Germany,South America,Africa
+2006,Round of 16,France,Spain,3,1,Germany,Europe,Europe
+2006,Round of 16,England,Ecuador,1,0,Germany,Europe,South America
+2006,Round of 16,Switzerland,Ukraine,0,0,Germany,Europe,Europe
+2006,Quarter-finals,Germany,Argentina,1,1,Germany,Europe,South America
+2006,Quarter-finals,Italy,Ukraine,3,0,Germany,Europe,Europe
+2006,Quarter-finals,Portugal,England,0,0,Germany,Europe,Europe
+2006,Quarter-finals,Brazil,France,0,1,Germany,South America,Europe
+2006,Semi-finals,Germany,Italy,0,2,Germany,Europe,Europe
+2006,Semi-finals,Portugal,France,0,1,Germany,Europe,Europe
+2006,Final,Italy,France,1,1,Germany,Europe,Europe
+2006,Third place,Germany,Portugal,3,1,Germany,Europe,Europe
+2010,Group Stage,South Africa,Mexico,1,1,South Africa,Africa,North America
+2010,Group Stage,Uruguay,France,0,0,South Africa,South America,Europe
+2010,Group Stage,South Africa,Uruguay,0,3,South Africa,Africa,South America
+2010,Group Stage,France,Mexico,0,2,South Africa,Europe,North America
+2010,Group Stage,France,South Africa,1,2,South Africa,Europe,Africa
+2010,Group Stage,Mexico,Uruguay,0,1,South Africa,North America,South America
+2010,Group Stage,Argentina,Nigeria,1,0,South Africa,South America,Africa
+2010,Group Stage,South Korea,Greece,2,0,South Africa,Asia,Europe
+2010,Group Stage,Argentina,South Korea,4,1,South Africa,South America,Asia
+2010,Group Stage,Greece,Nigeria,2,1,South Africa,Europe,Africa
+2010,Group Stage,Argentina,Greece,2,0,South Africa,South America,Europe
+2010,Group Stage,Nigeria,South Korea,2,2,South Africa,Africa,Asia
+2010,Group Stage,England,United States,1,1,South Africa,Europe,North America
+2010,Group Stage,Algeria,Slovenia,0,1,South Africa,Africa,Europe
+2010,Group Stage,England,Algeria,0,0,South Africa,Europe,Africa
+2010,Group Stage,United States,Slovenia,2,2,South Africa,North America,Europe
+2010,Group Stage,England,Slovenia,1,0,South Africa,Europe,Europe
+2010,Group Stage,United States,Algeria,1,0,South Africa,North America,Africa
+2010,Group Stage,Germany,Australia,4,0,South Africa,Europe,Oceania
+2010,Group Stage,Serbia,Ghana,0,1,South Africa,Europe,Africa
+2010,Group Stage,Germany,Serbia,0,1,South Africa,Europe,Europe
+2010,Group Stage,Ghana,Australia,1,1,South Africa,Africa,Oceania
+2010,Group Stage,Germany,Ghana,1,0,South Africa,Europe,Africa
+2010,Group Stage,Australia,Serbia,2,1,South Africa,Oceania,Europe
+2010,Group Stage,Netherlands,Denmark,2,0,South Africa,Europe,Europe
+2010,Group Stage,Japan,Cameroon,1,0,South Africa,Asia,Africa
+2010,Group Stage,Netherlands,Japan,1,0,South Africa,Europe,Asia
+2010,Group Stage,Cameroon,Denmark,1,2,South Africa,Africa,Europe
+2010,Group Stage,Netherlands,Cameroon,2,1,South Africa,Europe,Africa
+2010,Group Stage,Denmark,Japan,1,3,South Africa,Europe,Asia
+2010,Group Stage,Italy,Paraguay,1,1,South Africa,Europe,South America
+2010,Group Stage,New Zealand,Slovakia,1,1,South Africa,Oceania,Europe
+2010,Group Stage,Italy,New Zealand,1,1,South Africa,Europe,Oceania
+2010,Group Stage,Slovakia,Paraguay,0,2,South Africa,Europe,South America
+2010,Group Stage,Italy,Slovakia,2,3,South Africa,Europe,Europe
+2010,Group Stage,Paraguay,New Zealand,0,0,South Africa,South America,Oceania
+2010,Group Stage,Brazil,North Korea,2,1,South Africa,South America,Asia
+2010,Group Stage,Ivory Coast,Portugal,0,0,South Africa,Africa,Europe
+2010,Group Stage,Brazil,Ivory Coast,3,1,South Africa,South America,Africa
+2010,Group Stage,Portugal,North Korea,7,0,South Africa,Europe,Asia
+2010,Group Stage,Brazil,Portugal,0,0,South Africa,South America,Europe
+2010,Group Stage,Ivory Coast,North Korea,3,0,South Africa,Africa,Asia
+2010,Group Stage,Spain,Switzerland,0,1,South Africa,Europe,Europe
+2010,Group Stage,Honduras,Chile,0,1,South Africa,North America,South America
+2010,Group Stage,Spain,Honduras,2,0,South Africa,Europe,North America
+2010,Group Stage,Chile,Switzerland,1,0,South Africa,South America,Europe
+2010,Group Stage,Spain,Chile,2,1,South Africa,Europe,South America
+2010,Group Stage,Switzerland,Honduras,0,0,South Africa,Europe,North America
+2010,Round of 16,Uruguay,South Korea,2,1,South Africa,South America,Asia
+2010,Round of 16,Ghana,United States,2,1,South Africa,Africa,North America
+2010,Round of 16,Germany,England,4,1,South Africa,Europe,Europe
+2010,Round of 16,Argentina,Mexico,3,1,South Africa,South America,North America
+2010,Round of 16,Netherlands,Slovakia,2,1,South Africa,Europe,Europe
+2010,Round of 16,Brazil,Chile,3,0,South Africa,South America,South America
+2010,Round of 16,Paraguay,Japan,0,0,South Africa,South America,Asia
+2010,Round of 16,Spain,Portugal,1,0,South Africa,Europe,Europe
+2010,Quarter-finals,Netherlands,Brazil,2,1,South Africa,Europe,South America
+2010,Quarter-finals,Ghana,Uruguay,1,1,South Africa,Africa,South America
+2010,Quarter-finals,Argentina,Germany,0,4,South Africa,South America,Europe
+2010,Quarter-finals,Spain,Paraguay,1,0,South Africa,Europe,South America
+2010,Semi-finals,Uruguay,Netherlands,2,3,South Africa,South America,Europe
+2010,Semi-finals,Germany,Spain,0,1,South Africa,Europe,Europe
+2010,Final,Netherlands,Spain,0,1,South Africa,Europe,Europe
+2010,Third place,Uruguay,Germany,2,3,South Africa,South America,Europe
+2014,Group Stage,Brazil,Croatia,3,1,Brazil,South America,Europe
+2014,Group Stage,Mexico,Cameroon,1,0,Brazil,North America,Africa
+2014,Group Stage,Brazil,Mexico,0,0,Brazil,South America,North America
+2014,Group Stage,Cameroon,Croatia,0,4,Brazil,Africa,Europe
+2014,Group Stage,Brazil,Cameroon,4,1,Brazil,South America,Africa
+2014,Group Stage,Croatia,Mexico,1,3,Brazil,Europe,North America
+2014,Group Stage,Spain,Netherlands,1,5,Brazil,Europe,Europe
+2014,Group Stage,Chile,Australia,3,1,Brazil,South America,Oceania
+2014,Group Stage,Spain,Chile,0,2,Brazil,Europe,South America
+2014,Group Stage,Netherlands,Australia,3,2,Brazil,Europe,Oceania
+2014,Group Stage,Spain,Australia,3,0,Brazil,Europe,Oceania
+2014,Group Stage,Netherlands,Chile,2,0,Brazil,Europe,South America
+2014,Group Stage,Colombia,Greece,3,0,Brazil,South America,Europe
+2014,Group Stage,Ivory Coast,Japan,2,1,Brazil,Africa,Asia
+2014,Group Stage,Colombia,Ivory Coast,2,1,Brazil,South America,Africa
+2014,Group Stage,Japan,Greece,0,0,Brazil,Asia,Europe
+2014,Group Stage,Colombia,Japan,4,1,Brazil,South America,Asia
+2014,Group Stage,Greece,Ivory Coast,2,1,Brazil,Europe,Africa
+2014,Group Stage,Uruguay,Costa Rica,1,3,Brazil,South America,North America
+2014,Group Stage,England,Italy,1,2,Brazil,Europe,Europe
+2014,Group Stage,Uruguay,England,2,1,Brazil,South America,Europe
+2014,Group Stage,Italy,Costa Rica,0,1,Brazil,Europe,North America
+2014,Group Stage,Italy,Uruguay,0,1,Brazil,Europe,South America
+2014,Group Stage,Costa Rica,England,0,0,Brazil,North America,Europe
+2014,Group Stage,Switzerland,Ecuador,2,1,Brazil,Europe,South America
+2014,Group Stage,France,Honduras,3,0,Brazil,Europe,North America
+2014,Group Stage,Switzerland,France,2,5,Brazil,Europe,Europe
+2014,Group Stage,Honduras,Ecuador,1,2,Brazil,North America,South America
+2014,Group Stage,France,Ecuador,0,0,Brazil,Europe,South America
+2014,Group Stage,Honduras,Switzerland,0,3,Brazil,North America,Europe
+2014,Group Stage,Argentina,Bosnia,2,1,Brazil,South America,Europe
+2014,Group Stage,Iran,Nigeria,0,0,Brazil,Asia,Africa
+2014,Group Stage,Argentina,Iran,1,0,Brazil,South America,Asia
+2014,Group Stage,Nigeria,Bosnia,1,0,Brazil,Africa,Europe
+2014,Group Stage,Argentina,Nigeria,3,2,Brazil,South America,Africa
+2014,Group Stage,Bosnia,Iran,3,1,Brazil,Europe,Asia
+2014,Group Stage,Germany,Portugal,4,0,Brazil,Europe,Europe
+2014,Group Stage,Ghana,United States,1,2,Brazil,Africa,North America
+2014,Group Stage,Germany,Ghana,2,2,Brazil,Europe,Africa
+2014,Group Stage,United States,Portugal,2,2,Brazil,North America,Europe
+2014,Group Stage,Germany,United States,1,0,Brazil,Europe,North America
+2014,Group Stage,Portugal,Ghana,2,1,Brazil,Europe,Africa
+2014,Group Stage,Belgium,Algeria,2,1,Brazil,Europe,Africa
+2014,Group Stage,Russia,South Korea,1,1,Brazil,Europe,Asia
+2014,Group Stage,Belgium,Russia,1,0,Brazil,Europe,Europe
+2014,Group Stage,South Korea,Algeria,2,4,Brazil,Asia,Africa
+2014,Group Stage,Belgium,South Korea,1,0,Brazil,Europe,Asia
+2014,Group Stage,Algeria,Russia,1,1,Brazil,Africa,Europe
+2014,Round of 16,Brazil,Chile,1,1,Brazil,South America,South America
+2014,Round of 16,Colombia,Uruguay,2,0,Brazil,South America,South America
+2014,Round of 16,Netherlands,Mexico,2,1,Brazil,Europe,North America
+2014,Round of 16,Costa Rica,Greece,1,1,Brazil,North America,Europe
+2014,Round of 16,France,Nigeria,2,0,Brazil,Europe,Africa
+2014,Round of 16,Germany,Algeria,2,1,Brazil,Europe,Africa
+2014,Round of 16,Argentina,Switzerland,1,0,Brazil,South America,Europe
+2014,Round of 16,Belgium,United States,2,1,Brazil,Europe,North America
+2014,Quarter-finals,Brazil,Colombia,2,1,Brazil,South America,South America
+2014,Quarter-finals,France,Germany,0,1,Brazil,Europe,Europe
+2014,Quarter-finals,Netherlands,Costa Rica,0,0,Brazil,Europe,North America
+2014,Quarter-finals,Argentina,Belgium,1,0,Brazil,South America,Europe
+2014,Semi-finals,Brazil,Germany,1,7,Brazil,South America,Europe
+2014,Semi-finals,Netherlands,Argentina,0,0,Brazil,Europe,South America
+2014,Final,Germany,Argentina,1,0,Brazil,Europe,South America
+2014,Third place,Brazil,Netherlands,0,3,Brazil,South America,Europe
+2018,Group Stage,Russia,Saudi Arabia,5,0,Russia,Europe,Asia
+2018,Group Stage,Egypt,Uruguay,0,1,Russia,Africa,South America
+2018,Group Stage,Russia,Egypt,3,1,Russia,Europe,Africa
+2018,Group Stage,Uruguay,Saudi Arabia,1,0,Russia,South America,Asia
+2018,Group Stage,Russia,Uruguay,0,3,Russia,Europe,South America
+2018,Group Stage,Saudi Arabia,Egypt,2,1,Russia,Asia,Africa
+2018,Group Stage,Portugal,Spain,3,3,Russia,Europe,Europe
+2018,Group Stage,Morocco,Iran,0,1,Russia,Africa,Asia
+2018,Group Stage,Portugal,Morocco,1,0,Russia,Europe,Africa
+2018,Group Stage,Spain,Iran,1,0,Russia,Europe,Asia
+2018,Group Stage,Portugal,Iran,1,1,Russia,Europe,Asia
+2018,Group Stage,Spain,Morocco,2,2,Russia,Europe,Africa
+2018,Group Stage,France,Australia,2,1,Russia,Europe,Oceania
+2018,Group Stage,Peru,Denmark,0,1,Russia,South America,Europe
+2018,Group Stage,France,Peru,1,0,Russia,Europe,South America
+2018,Group Stage,Denmark,Australia,1,1,Russia,Europe,Oceania
+2018,Group Stage,France,Denmark,0,0,Russia,Europe,Europe
+2018,Group Stage,Australia,Peru,0,2,Russia,Oceania,South America
+2018,Group Stage,Argentina,Iceland,1,1,Russia,South America,Europe
+2018,Group Stage,Croatia,Nigeria,2,0,Russia,Europe,Africa
+2018,Group Stage,Argentina,Croatia,0,3,Russia,South America,Europe
+2018,Group Stage,Nigeria,Iceland,2,0,Russia,Africa,Europe
+2018,Group Stage,Argentina,Nigeria,2,1,Russia,South America,Africa
+2018,Group Stage,Croatia,Iceland,2,1,Russia,Europe,Europe
+2018,Group Stage,Brazil,Switzerland,1,1,Russia,South America,Europe
+2018,Group Stage,Costa Rica,Serbia,0,1,Russia,North America,Europe
+2018,Group Stage,Brazil,Costa Rica,2,0,Russia,South America,North America
+2018,Group Stage,Serbia,Switzerland,1,2,Russia,Europe,Europe
+2018,Group Stage,Brazil,Serbia,2,0,Russia,South America,Europe
+2018,Group Stage,Switzerland,Costa Rica,2,2,Russia,Europe,North America
+2018,Group Stage,Germany,Mexico,0,1,Russia,Europe,North America
+2018,Group Stage,Sweden,South Korea,1,0,Russia,Europe,Asia
+2018,Group Stage,Germany,Sweden,2,1,Russia,Europe,Europe
+2018,Group Stage,South Korea,Mexico,1,2,Russia,Asia,North America
+2018,Group Stage,Germany,South Korea,0,2,Russia,Europe,Asia
+2018,Group Stage,Sweden,Mexico,3,0,Russia,Europe,North America
+2018,Group Stage,Belgium,Panama,3,0,Russia,Europe,North America
+2018,Group Stage,Tunisia,England,1,2,Russia,Africa,Europe
+2018,Group Stage,Belgium,Tunisia,5,2,Russia,Europe,Africa
+2018,Group Stage,England,Panama,6,1,Russia,Europe,North America
+2018,Group Stage,England,Belgium,0,1,Russia,Europe,Europe
+2018,Group Stage,Panama,Tunisia,1,2,Russia,North America,Africa
+2018,Group Stage,Japan,Colombia,2,1,Russia,Asia,South America
+2018,Group Stage,Poland,Senegal,1,2,Russia,Europe,Africa
+2018,Group Stage,Japan,Senegal,2,2,Russia,Asia,Africa
+2018,Group Stage,Colombia,Poland,3,0,Russia,South America,Europe
+2018,Group Stage,Japan,Poland,0,1,Russia,Asia,Europe
+2018,Group Stage,Colombia,Senegal,1,0,Russia,South America,Africa
+2018,Round of 16,France,Argentina,4,3,Russia,Europe,South America
+2018,Round of 16,Uruguay,Portugal,2,1,Russia,South America,Europe
+2018,Round of 16,Spain,Russia,1,1,Russia,Europe,Europe
+2018,Round of 16,Croatia,Denmark,1,1,Russia,Europe,Europe
+2018,Round of 16,Brazil,Mexico,2,0,Russia,South America,North America
+2018,Round of 16,Belgium,Japan,3,2,Russia,Europe,Asia
+2018,Round of 16,Sweden,Switzerland,1,0,Russia,Europe,Europe
+2018,Round of 16,Colombia,England,1,1,Russia,South America,Europe
+2018,Quarter-finals,France,Uruguay,2,0,Russia,Europe,South America
+2018,Quarter-finals,Brazil,Belgium,1,2,Russia,South America,Europe
+2018,Quarter-finals,Sweden,England,0,2,Russia,Europe,Europe
+2018,Quarter-finals,Russia,Croatia,2,2,Russia,Europe,Europe
+2018,Semi-finals,France,Belgium,1,0,Russia,Europe,Europe
+2018,Semi-finals,Croatia,England,2,1,Russia,Europe,Europe
+2018,Final,France,Croatia,4,2,Russia,Europe,Europe
+2018,Third place,Belgium,England,2,0,Russia,Europe,Europe
+2022,Group Stage,Qatar,Ecuador,0,2,Qatar,Asia,South America
+2022,Group Stage,Senegal,Netherlands,0,2,Qatar,Africa,Europe
+2022,Group Stage,Qatar,Senegal,1,3,Qatar,Asia,Africa
+2022,Group Stage,Netherlands,Ecuador,1,1,Qatar,Europe,South America
+2022,Group Stage,Netherlands,Qatar,2,0,Qatar,Europe,Asia
+2022,Group Stage,Ecuador,Senegal,1,2,Qatar,South America,Africa
+2022,Group Stage,England,Iran,6,2,Qatar,Europe,Asia
+2022,Group Stage,United States,Wales,1,1,Qatar,North America,Europe
+2022,Group Stage,England,United States,0,0,Qatar,Europe,North America
+2022,Group Stage,Wales,Iran,0,2,Qatar,Europe,Asia
+2022,Group Stage,England,Wales,3,0,Qatar,Europe,Europe
+2022,Group Stage,Iran,United States,0,1,Qatar,Asia,North America
+2022,Group Stage,France,Australia,4,1,Qatar,Europe,Oceania
+2022,Group Stage,Denmark,Tunisia,0,0,Qatar,Europe,Africa
+2022,Group Stage,France,Denmark,2,1,Qatar,Europe,Europe
+2022,Group Stage,Tunisia,Australia,0,1,Qatar,Africa,Oceania
+2022,Group Stage,France,Tunisia,0,1,Qatar,Europe,Africa
+2022,Group Stage,Australia,Denmark,1,0,Qatar,Oceania,Europe
+2022,Group Stage,Argentina,Saudi Arabia,1,2,Qatar,South America,Asia
+2022,Group Stage,Mexico,Poland,0,0,Qatar,North America,Europe
+2022,Group Stage,Argentina,Mexico,2,0,Qatar,South America,North America
+2022,Group Stage,Poland,Saudi Arabia,2,0,Qatar,Europe,Asia
+2022,Group Stage,Poland,Argentina,0,2,Qatar,Europe,South America
+2022,Group Stage,Saudi Arabia,Mexico,1,2,Qatar,Asia,North America
+2022,Group Stage,Germany,Japan,1,2,Qatar,Europe,Asia
+2022,Group Stage,Spain,Costa Rica,7,0,Qatar,Europe,North America
+2022,Group Stage,Germany,Spain,1,1,Qatar,Europe,Europe
+2022,Group Stage,Japan,Costa Rica,0,1,Qatar,Asia,North America
+2022,Group Stage,Japan,Spain,2,1,Qatar,Asia,Europe
+2022,Group Stage,Costa Rica,Germany,2,4,Qatar,North America,Europe
+2022,Group Stage,Belgium,Canada,1,0,Qatar,Europe,North America
+2022,Group Stage,Morocco,Croatia,0,0,Qatar,Africa,Europe
+2022,Group Stage,Belgium,Morocco,0,2,Qatar,Europe,Africa
+2022,Group Stage,Croatia,Canada,4,1,Qatar,Europe,North America
+2022,Group Stage,Croatia,Belgium,0,0,Qatar,Europe,Europe
+2022,Group Stage,Canada,Morocco,1,2,Qatar,North America,Africa
+2022,Group Stage,Switzerland,Cameroon,1,0,Qatar,Europe,Africa
+2022,Group Stage,Brazil,Serbia,2,0,Qatar,South America,Europe
+2022,Group Stage,Switzerland,Brazil,0,1,Qatar,Europe,South America
+2022,Group Stage,Cameroon,Serbia,3,3,Qatar,Africa,Europe
+2022,Group Stage,Switzerland,Serbia,3,2,Qatar,Europe,Europe
+2022,Group Stage,Cameroon,Brazil,1,0,Qatar,Africa,South America
+2022,Group Stage,Portugal,Ghana,3,2,Qatar,Europe,Africa
+2022,Group Stage,Uruguay,South Korea,0,0,Qatar,South America,Asia
+2022,Group Stage,Portugal,Uruguay,2,0,Qatar,Europe,South America
+2022,Group Stage,South Korea,Ghana,2,3,Qatar,Asia,Africa
+2022,Group Stage,Portugal,South Korea,1,2,Qatar,Europe,Asia
+2022,Group Stage,Ghana,Uruguay,0,2,Qatar,Africa,South America
+2022,Round of 16,Netherlands,United States,3,1,Qatar,Europe,North America
+2022,Round of 16,Argentina,Australia,2,1,Qatar,South America,Oceania
+2022,Round of 16,France,Poland,3,1,Qatar,Europe,Europe
+2022,Round of 16,England,Senegal,3,0,Qatar,Europe,Africa
+2022,Round of 16,Japan,Croatia,1,1,Qatar,Asia,Europe
+2022,Round of 16,Brazil,South Korea,4,1,Qatar,South America,Asia
+2022,Round of 16,Morocco,Spain,0,0,Qatar,Africa,Europe
+2022,Round of 16,Portugal,Switzerland,6,1,Qatar,Europe,Europe
+2022,Quarter-finals,Netherlands,Argentina,2,2,Qatar,Europe,South America
+2022,Quarter-finals,Croatia,Brazil,1,1,Qatar,Europe,South America
+2022,Quarter-finals,England,France,1,2,Qatar,Europe,Europe
+2022,Quarter-finals,Morocco,Portugal,1,0,Qatar,Africa,Europe
+2022,Semi-finals,Argentina,Croatia,3,0,Qatar,South America,Europe
+2022,Semi-finals,France,Morocco,2,0,Qatar,Europe,Africa
+2022,Final,Argentina,France,3,3,Qatar,South America,Europe
+2022,Third place,Croatia,Morocco,2,1,Qatar,Europe,Africa

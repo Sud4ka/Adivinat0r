@@ -1,0 +1,10 @@
+{
+  "players": [
+    "Player"
+  ],
+  "brackets": {
+    "Player": {
+      "champion": "Argentina"
+    }
+  }
+}

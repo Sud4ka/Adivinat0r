@@ -1,0 +1,27 @@
+{
+  "tournament": "FIFA World Cup 2026",
+  "hosts": ["United States", "Canada", "Mexico"],
+  "format": "12 groups of 4, top 2 + 8 best third-placed advance to Round of 32",
+  "groups": {
+    "A": ["Mexico", "South Africa", "South Korea", "Czechia"],
+    "B": ["Canada", "Bosnia and Herzegovina", "Qatar", "Switzerland"],
+    "C": ["Brazil", "Morocco", "Haiti", "Scotland"],
+    "D": ["United States", "Paraguay", "Australia", "Turkey"],
+    "E": ["Germany", "Curaçao", "Ivory Coast", "Ecuador"],
+    "F": ["Netherlands", "Japan", "Sweden", "Tunisia"],
+    "G": ["Belgium", "Egypt", "Iran", "New Zealand"],
+    "H": ["Spain", "Cabo Verde", "Saudi Arabia", "Uruguay"],
+    "I": ["France", "Senegal", "Iraq", "Norway"],
+    "J": ["Argentina", "Algeria", "Austria", "Jordan"],
+    "K": ["Portugal", "Congo DR", "Uzbekistan", "Colombia"],
+    "L": ["England", "Croatia", "Ghana", "Panama"]
+  },
+  "knockout_stages": {
+    "round_of_32": null,
+    "round_of_16": null,
+    "quarter_finals": null,
+    "semi_finals": null,
+    "third_place": null,
+    "final": null
+  }
+}

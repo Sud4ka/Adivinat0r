@@ -1,0 +1,242 @@
+{
+  "Algeria": {
+    "attack": 1.25,
+    "creativity": 2.54,
+    "defense": 1.22
+  },
+  "Argentina": {
+    "attack": 3.09,
+    "creativity": 5.34,
+    "defense": 3.84
+  },
+  "Australia": {
+    "attack": 1.61,
+    "creativity": 5.34,
+    "defense": 4.52
+  },
+  "Austria": {
+    "attack": 2.62,
+    "creativity": 3.77,
+    "defense": 1.63
+  },
+  "Belgium": {
+    "attack": 0.71,
+    "creativity": 3.06,
+    "defense": 4.37
+  },
+  "Bosnia and Herzegovina": {
+    "attack": 1.37,
+    "creativity": 5.23,
+    "defense": 2.45
+  },
+  "Brazil": {
+    "attack": 1.86,
+    "creativity": 6.03,
+    "defense": 5.88
+  },
+  "Cape Verde": {
+    "attack": 1.07,
+    "creativity": 5.44,
+    "defense": 6.0
+  },
+  "Canada": {
+    "attack": 4.23,
+    "creativity": 6.74,
+    "defense": 4.69
+  },
+  "Colombia": {
+    "attack": 1.66,
+    "creativity": 7.79,
+    "defense": 3.92
+  },
+  "Congo DR": {
+    "attack": 2.86,
+    "creativity": 3.2,
+    "defense": 2.75
+  },
+  "Ivory Coast": {
+    "attack": 1.51,
+    "creativity": 5.34,
+    "defense": 5.72
+  },
+  "Croatia": {
+    "attack": 2.71,
+    "creativity": 7.47,
+    "defense": 1.22
+  },
+  "Curaçao": {
+    "attack": 0.77,
+    "creativity": 3.56,
+    "defense": 5.24
+  },
+  "Czechia": {
+    "attack": 0.99,
+    "creativity": 4.57,
+    "defense": 2.68
+  },
+  "Ecuador": {
+    "attack": 1.21,
+    "creativity": 4.63,
+    "defense": 5.81
+  },
+  "Egypt": {
+    "attack": 2.62,
+    "creativity": 7.12,
+    "defense": 2.14
+  },
+  "England": {
+    "attack": 6.07,
+    "creativity": 9.41,
+    "defense": 1.4
+  },
+  "France": {
+    "attack": 10.0,
+    "creativity": 8.13,
+    "defense": 2.45
+  },
+  "Germany": {
+    "attack": 7.68,
+    "creativity": 6.9,
+    "defense": 3.98
+  },
+  "Ghana": {
+    "attack": 1.31,
+    "creativity": 7.12,
+    "defense": 7.96
+  },
+  "Haiti": {
+    "attack": 0.94,
+    "creativity": 2.67,
+    "defense": 1.22
+  },
+  "Iran": {
+    "attack": 1.13,
+    "creativity": 4.89,
+    "defense": 6.05
+  },
+  "Iraq": {
+    "attack": 1.96,
+    "creativity": 4.15,
+    "defense": 1.22
+  },
+  "Japan": {
+    "attack": 2.86,
+    "creativity": 10.0,
+    "defense": 4.59
+  },
+  "Jordan": {
+    "attack": 2.29,
+    "creativity": 6.53,
+    "defense": 1.53
+  },
+  "South Korea": {
+    "attack": 1.19,
+    "creativity": 5.04,
+    "defense": 2.53
+  },
+  "Mexico": {
+    "attack": 2.32,
+    "creativity": 5.34,
+    "defense": 9.39
+  },
+  "Morocco": {
+    "attack": 0.71,
+    "creativity": 7.88,
+    "defense": 5.61
+  },
+  "Netherlands": {
+    "attack": 3.36,
+    "creativity": 6.1,
+    "defense": 3.16
+  },
+  "New Zealand": {
+    "attack": 2.02,
+    "creativity": 5.34,
+    "defense": 1.91
+  },
+  "Norway": {
+    "attack": 4.76,
+    "creativity": 3.56,
+    "defense": 5.1
+  },
+  "Panama": {
+    "attack": 1.07,
+    "creativity": 4.27,
+    "defense": 3.67
+  },
+  "Paraguay": {
+    "attack": 0.86,
+    "creativity": 8.65,
+    "defense": 3.93
+  },
+  "Portugal": {
+    "attack": 1.07,
+    "creativity": 7.12,
+    "defense": 2.2
+  },
+  "Qatar": {
+    "attack": 1.0,
+    "creativity": 1.78,
+    "defense": 0.92
+  },
+  "Saudi Arabia": {
+    "attack": 0.95,
+    "creativity": 3.31,
+    "defense": 2.45
+  },
+  "Scotland": {
+    "attack": 1.51,
+    "creativity": 5.04,
+    "defense": 5.2
+  },
+  "Senegal": {
+    "attack": 2.43,
+    "creativity": 3.31,
+    "defense": 1.22
+  },
+  "South Africa": {
+    "attack": 1.71,
+    "creativity": 3.91,
+    "defense": 1.84
+  },
+  "Spain": {
+    "attack": 3.57,
+    "creativity": 4.63,
+    "defense": 10.0
+  },
+  "Sweden": {
+    "attack": 3.93,
+    "creativity": 6.23,
+    "defense": 1.22
+  },
+  "Switzerland": {
+    "attack": 2.32,
+    "creativity": 7.81,
+    "defense": 4.38
+  },
+  "Tunisia": {
+    "attack": 0.89,
+    "creativity": 3.56,
+    "defense": 3.67
+  },
+  "Turkey": {
+    "attack": 0.8,
+    "creativity": 3.19,
+    "defense": 1.74
+  },
+  "Uruguay": {
+    "attack": 1.86,
+    "creativity": 6.23,
+    "defense": 1.59
+  },
+  "United States": {
+    "attack": 2.86,
+    "creativity": 6.48,
+    "defense": 6.88
+  },
+  "Uzbekistan": {
+    "attack": 2.14,
+    "creativity": 5.34,
+    "defense": 1.22
+  }
+}
