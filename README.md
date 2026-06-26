@@ -5,7 +5,7 @@
 ![scikit--learn](https://img.shields.io/badge/scikit--learn-1.3%2B-7b2ff7?style=flat)
 ![License](https://img.shields.io/badge/license-MIT-00ff88?style=flat)
 
-**ADIVINAT0R** es una aplicación de escritorio con temática **cyberpunk** que analiza probabilísticamente los partidos de la Copa del Mundo 2026 mediante un **Ensemble VotingClassifier** entrenado sobre 27 features extraídas de datos históricos (1930–2022), sistema de rating **ELO dinámico**, **Power Rankings** desde la API Fantasy de FIFA, y un modelo **Poisson bivariado (Dixon-Coles)** para simular marcadores.
+**ADIVINAT0R** es una aplicación de escritorio con temática **cyberpunk** que analiza probabilísticamente los partidos de la Copa del Mundo 2026 mediante un **Ensemble VotingClassifier** (LR + Random Forest 200 + Gradient Boosting 150) entrenado sobre **31 features** extraídas de datos históricos (1930–2022), sistema de rating **ELO dinámico**, **Power Rankings** desde la API Fantasy de FIFA, factores de **momentum** y **ambiente** (altitud/clima), y un modelo **Poisson bivariado (Dixon-Coles)** para simular marcadores.
 
 La interfaz gráfica está completamente en español con banderas para los 48 equipos clasificados, resultados en vivo desde la API oficial de FIFA y actualización automática de datos estadísticos.
 
@@ -20,7 +20,7 @@ La interfaz gráfica está completamente en español con banderas para los 48 eq
 | Componente | Estado |
 |:-----------|:-------|
 | Ensemble VotingClassifier (LR + RF 200 + GB 150) | ✅ Estable |
-| 27 features en 4 categorías (históricas, ELO, player power, forma 2026) | ✅ Estable |
+| 31 features en 5 categorías (históricas, ELO, player power, forma 2026, momentum/ambiente) | ✅ Estable |
 | Sistema ELO dinámico (K variable según fase) | ✅ Estable |
 | Decaimiento temporal (0.94^años) | ✅ Estable |
 | Modelo Poisson/Dixon-Coles con correlación τ | ✅ Estable |
@@ -29,7 +29,7 @@ La interfaz gráfica está completamente en español con banderas para los 48 eq
 | Calibration metrics (ECE, Log Loss, Brier, Reliability Curve) | ✅ Estable |
 | Power Rankings vía API Fantasy FIFA | ✅ Estable |
 | Resultados en vivo vía API Calendar FIFA | ✅ Estable |
-| Simulador Monte Carlo del torneo | ✅ Estable |
+| Simulador Monte Carlo del torneo (paralelizado, 10K sims en ~46s) | ✅ Estable |
 | H2H histórico | ✅ Estable |
 | Generaciones legendarias | ✅ Estable |
 | Módulo Fantasía | ✅ Experimental |
@@ -39,11 +39,16 @@ La interfaz gráfica está completamente en español con banderas para los 48 eq
 
 | Toggle | Descripción |
 |:-------|:------------|
-| Momentum Neural | Interfaz preparada — no integrado al modelo actual |
-| Ambientales | Interfaz preparada — no integrado al modelo actual |
 | H2H Profundo | Interfaz preparada — usa H2H básico actualmente |
 | xG Histórico | Interfaz preparada — sin datos de xG disponibles |
 | Modo Fantasía | Interfaz preparada — no afecta predicciones |
+
+### Funcionalidades integradas al modelo (v2.2.0)
+
+| Módulo | Estado |
+|:-------|:-------|
+| Momentum Neural | ✅ Integrado en feature vector (momentum_a, momentum_b, momentum_diff) |
+| Ambientales | ✅ Integrado en feature vector (env_score: altitud, clima, fatiga) |
 
 ### Fuentes de datos
 
@@ -94,7 +99,7 @@ El modelo central es un ensamble de tres clasificadores combinados por **voto bl
 | Random Forest | 200 árboles, max_depth=6, class_weight=balanced | 2 |
 | Gradient Boosting | 150 árboles, max_depth=4, learning_rate=0.05 | 2 |
 
-### Features (27 dimensiones)
+### Features (31 dimensiones)
 
 | Categoría | Features | Descripción |
 |:----------|:---------|:------------|
@@ -102,6 +107,8 @@ El modelo central es un ensamble de tres clasificadores combinados por **voto bl
 | ⚡ **ELO dinámico** (3) | elo_a, elo_b, elo_diff | Rating ELO internacional con K=32 mundial, K=24 eliminatorias, K=16 amistosos |
 | 🪄 **Player Power** (3) | pp_a, pp_b, pp_diff | Puntaje promedio de jugadores por equipo desde Fantasy FIFA API |
 | 🔴 **Forma 2026** (5) | Diferenciales de goles, win rate, ppg, goal difference | Calculados desde resultados reales del torneo en curso |
+| 🔥 **Momentum** (3) | momentum_a, momentum_b, momentum_diff | Tendencia de rendimiento en los últimos 3 mundiales ponderada por recencia |
+| 🌍 **Ambiente** (1) | env_score | Factor compuesto por altitud (0.3), clima (0.25), descanso (0.25) y viaje (0.2) |
 
 ### Decaimiento temporal
 
@@ -165,7 +172,7 @@ El modelo se evalúa con validación temporal que respeta la estructura secuenci
 
 ## 🔍 Interpretabilidad (SHAP)
 
-Cada predicción incluye un análisis de factores contribuyentes utilizando **SHAP KernelExplainer**:
+Cada predicción incluye un análisis de factores contribuyentes utilizando **SHAP KernelExplainer** ejecutado en un hilo secundario para no bloquear la interfaz. El background de 80 muestras se cachea entre predicciones.
 
 ```
 Factores a favor de Argentina:
@@ -190,7 +197,7 @@ Tabla de posiciones en vivo con banderas, puntos, GF, GC, DG. Indicador EN VIVO.
 Resultados reales del Mundial 2026 con tabla de posiciones actualizada desde API FIFA.
 
 ### 🔮 PREDICTOR
-Selección de equipos, fase, cálculo de probabilidades con barras, marcador estimado vía Dixon-Coles, factores SHAP, y actualización de datos estadísticos.
+Selección de equipos, fase, cálculo de probabilidades con barras, marcador estimado vía Dixon-Coles, factores SHAP (en hilo secundario sin bloquear la UI), y actualización de datos estadísticos. Usa **EnsemblePredictor** (LR + RF + GB con soft voting).
 
 ### 🏆 ESTADÍSTICAS
 Perfil histórico completo de 92 selecciones: apariciones, partidos, rendimiento, títulos.
@@ -202,7 +209,7 @@ Enfrentamiento histórico entre dos selecciones con estadísticas cara a cara.
 Exploración de generaciones legendarias (Brasil 1970, Argentina 1986, etc.).
 
 ### 🎲 SIMULADOR
-Simulación Monte Carlo del torneo completo: fase de grupos + eliminatorias.
+Simulación Monte Carlo del torneo completo: fase de grupos + eliminatorias. Precomputa 1,128 probabilidades pairwise y ejecuta 10,000 simulaciones en paralelo (~46s total).
 
 ### 📈 CALIBRACIÓN
 Brier Score, Log Loss, ECE, Reliability Curve del modelo en datos reales.
@@ -267,25 +274,25 @@ adivinat0r/
 │   ├── player_power.json      # Poder de jugadores por equipo
 │   └── power_rankings.json    # Power Rankings (ataque/creatividad/defensa)
 ├── engine/
-│   ├── stats.py               # Ingeniería de 27 features + factores ataque/defensa
-│   ├── predictor.py           # Ensemble VotingClassifier (LR+RF+GB)
-│   ├── poisson.py             # Modelo Dixon-Coles con correlación τ
-│   ├── elo.py                 # Sistema de rating ELO dinámico
-│   ├── backtesting.py         # Walk Forward Validation
-│   ├── explainability.py      # SHAP: factores por predicción
-│   ├── calibration_metrics.py # ECE, Reliability Curve, Brier desglosado
-│   ├── calibration.py         # Tracking de precisión en tiempo real
-│   ├── montecarlo.py          # Simulador Monte Carlo del torneo
-│   ├── live_data.py           # Forma actual 2026 (5 features en vivo)
-│   ├── worldcup_api.py        # API FIFA: resultados + Power Rankings
-│   ├── momentum.py            # [Disponible] Tracker de momentum
-│   ├── environment.py         # [Disponible] Factor ambiental
-│   ├── h2h.py                 # Análisis Head-to-Head
-│   ├── simulator.py           # Simulador de torneo
-│   ├── generations.py         # Generaciones legendarias
-│   ├── alerts.py              # Sistema de notificaciones
-│   ├── translate.py           # Traducción inglés↔español + banderas
-│   └── datascraper.py         # Scraper de Wikipedia
+│   ├── stats.py               # Ingeniería de 31 features + caché global + factores ataque/defensa
+│   ├── predictor.py            # Ensemble VotingClassifier (LR+RF+GB) con soft voting
+│   ├── poisson.py              # Modelo Dixon-Coles con correlación τ
+│   ├── elo.py                  # Sistema de rating ELO dinámico
+│   ├── backtesting.py          # Walk Forward Validation (usa build_feature_vector de stats)
+│   ├── explainability.py       # SHAP: factores por predicción (background cacheado)
+│   ├── calibration_metrics.py  # ECE, Reliability Curve, Brier desglosado
+│   ├── calibration.py          # Tracking de precisión en tiempo real
+│   ├── montecarlo.py           # Simulador Monte Carlo paralelizado (ThreadPoolExecutor)
+│   ├── live_data.py            # Forma actual 2026 (5 features en vivo)
+│   ├── worldcup_api.py         # API FIFA: resultados + Power Rankings
+│   ├── momentum.py             # Tracker de momentum (integrado al feature vector)
+│   ├── environment.py          # Factor ambiental: altitud, clima, viaje (integrado)
+│   ├── h2h.py                  # Análisis Head-to-Head
+│   ├── simulator.py            # Simulador de torneo (single-run)
+│   ├── generations.py          # Generaciones legendarias
+│   ├── alerts.py               # Sistema de notificaciones
+│   ├── translate.py            # Traducción inglés↔español + banderas
+│   └── datascraper.py          # Scraper de Wikipedia
 └── gui/
     ├── theme.py               # Estilos cyberpunk
     ├── home.py                # Tabla de posiciones
@@ -345,6 +352,8 @@ adivinat0r/
 - Agregar features de cuotas de apuestas como señal de mercado
 - Implementar Platt Scaling o Temperature Scaling para mejorar calibración
 - Agregar análisis de incertidumbre (intervalos de confianza en las probabilidades)
+- Integrar módulo H2H profundo con estadísticas avanzadas de enfrentamientos
+- Agregar datos históricos de xG (expected goals) si se consigue una fuente confiable
 
 ---
 

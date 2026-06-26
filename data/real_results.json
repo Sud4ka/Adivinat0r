@@ -443,12 +443,12 @@
     {
       "home": "Argentina",
       "away": "Austria",
-      "home_score": 0,
+      "home_score": 2,
       "away_score": 0,
       "stage": "First Stage",
       "group": "Group J",
       "date": "2026-06-22T17:00:00Z",
-      "match_time": "33'",
+      "match_time": "98'",
       "played": true
     },
     {
@@ -1564,24 +1564,24 @@
       {
         "team": "Argentina",
         "P": 2,
-        "W": 1,
-        "D": 1,
+        "W": 2,
+        "D": 0,
         "L": 0,
-        "GF": 3,
+        "GF": 5,
         "GA": 0,
-        "GD": 3,
-        "Pts": 4
+        "GD": 5,
+        "Pts": 6
       },
       {
         "team": "Austria",
         "P": 2,
         "W": 1,
-        "D": 1,
-        "L": 0,
+        "D": 0,
+        "L": 1,
         "GF": 3,
-        "GA": 1,
-        "GD": 2,
-        "Pts": 4
+        "GA": 3,
+        "GD": 0,
+        "Pts": 3
       },
       {
         "team": "Jordan",

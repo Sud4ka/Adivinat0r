@@ -20,19 +20,43 @@ FEATURE_NAMES = [
     "elo_a", "elo_b", "elo_diff",
     "form_gf_diff", "form_ga_diff", "form_win_rate_diff",
     "form_ppg_diff", "form_gd_norm",
+    "momentum_a", "momentum_b", "momentum_diff",
+    "env_score",
 ]
 
 
+_cache_matches = None
+_cache_teams = None
+_cache_player_power = None
+_cache_power_rankings = None
+_cache_attack_defense = None
+
+
+def invalidate_caches():
+    global _cache_matches, _cache_teams, _cache_player_power
+    global _cache_power_rankings, _cache_attack_defense
+    _cache_matches = None
+    _cache_teams = None
+    _cache_player_power = None
+    _cache_power_rankings = None
+    _cache_attack_defense = None
+
+
 def load_matches() -> pd.DataFrame:
-    path = os.path.join(DATA_DIR, "worldcups.csv")
-    df = pd.read_csv(path)
-    return df
+    global _cache_matches
+    if _cache_matches is None:
+        path = os.path.join(DATA_DIR, "worldcups.csv")
+        _cache_matches = pd.read_csv(path)
+    return _cache_matches
 
 
 def load_teams() -> dict:
-    path = os.path.join(DATA_DIR, "teams.json")
-    with open(path) as f:
-        return json.load(f)
+    global _cache_teams
+    if _cache_teams is None:
+        path = os.path.join(DATA_DIR, "teams.json")
+        with open(path) as f:
+            _cache_teams = json.load(f)
+    return _cache_teams
 
 
 def load_fixtures_2026() -> dict:
@@ -42,12 +66,15 @@ def load_fixtures_2026() -> dict:
 
 
 def load_player_power() -> dict:
-    path = os.path.join(DATA_DIR, "player_power.json")
-    try:
-        with open(path) as f:
-            return json.load(f)
-    except Exception:
-        return {}
+    global _cache_player_power
+    if _cache_player_power is None:
+        path = os.path.join(DATA_DIR, "player_power.json")
+        try:
+            with open(path) as f:
+                _cache_player_power = json.load(f)
+        except Exception:
+            _cache_player_power = {}
+    return _cache_player_power
 
 
 def get_team_list() -> list:
@@ -126,7 +153,12 @@ def compute_team_stats(df: pd.DataFrame, team: str, recent_years: int = 3) -> di
     }
 
 
-def compute_attack_defense_factors(df: pd.DataFrame) -> dict:
+def compute_attack_defense_factors(df: pd.DataFrame = None) -> dict:
+    global _cache_attack_defense
+    if _cache_attack_defense is not None:
+        return _cache_attack_defense
+    if df is None:
+        df = load_matches()
     all_home_goals = df["home_goals"].mean()
     all_away_goals = df["away_goals"].mean()
     teams = set(df["home_team"]).union(set(df["away_team"]))
@@ -148,6 +180,7 @@ def compute_attack_defense_factors(df: pd.DataFrame) -> dict:
             "attack": ((hs / max(all_home_goals, 0.01)) + (ac / max(all_away_goals, 0.01))) / 2,
             "defense": ((hc / max(all_away_goals, 0.01)) + (acd / max(all_home_goals, 0.01))) / 2,
         }
+    _cache_attack_defense = factors
     return factors
 
 
@@ -171,6 +204,10 @@ def get_continent(team: str) -> str:
 
 
 def _load_power_rankings():
+    global _cache_power_rankings
+    if _cache_power_rankings is not None:
+        return _cache_power_rankings
+
     try:
         from engine.worldcup_api import load_power_rankings as _lpr
         pr = _lpr()
@@ -178,6 +215,7 @@ def _load_power_rankings():
         pr = {}
 
     if not pr:
+        _cache_power_rankings = pr
         return pr
 
     continent_avgs = {}
@@ -204,6 +242,7 @@ def _load_power_rankings():
             if pr[team].get(k, 0) == 0:
                 pr[team][k] = max(pr[team].get(k, 0), defaults[k])
 
+    _cache_power_rankings = pr
     return pr
 
 
@@ -327,6 +366,19 @@ def build_feature_vector(
 
     live_feats = build_live_features(team_a, team_b)
     features = np.concatenate([features, live_feats])
+
+    from engine.momentum import MomentumTracker
+    mt = MomentumTracker(df=df)
+    momentum_feats = mt.get_momentum_features(team_a, team_b)
+    features = np.concatenate([features, momentum_feats])
+
+    try:
+        from engine.environment import compute_env_score
+        env = compute_env_score(team_a, team_b, host or "United States", match_number=0)
+    except Exception:
+        env = 1.0
+    features = np.concatenate([features, np.array([env])])
+
     return features
 
 

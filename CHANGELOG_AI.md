@@ -1,5 +1,37 @@
 # CHANGELOG AI — ADIVINAT0R
 
+## [2.2.0] — 2026-06
+
+### Añadido
+
+#### Optimización de Rendimiento
+- **Caché global** en `stats.py` para `load_matches()`, `load_teams()`, `load_player_power()`, `_load_power_rankings()`, `compute_attack_defense_factors()`. Reduce I/O redundante en cada predicción.
+- **SHAP en hilo secundario**: `explain_prediction` ahora se ejecuta en un `QThread` en la GUI. La UI no se congela durante el cálculo de SHAP.
+- **Background SHAP cacheado**: `explainability.py` cachea las 80 muestras de background con invalidación por cambio de features.
+- **Monte Carlo paralelizado**: `montecarlo.py` usa `ThreadPoolExecutor` (8 workers) + precomputación de 1,128 probabilidades pairwise. 10,000 simulaciones en ~46s (antes ~100+ min).
+- **Deduplicación backtesting**: `backtesting.py` ahora reusa `build_feature_vector()` de `stats.py` (eliminadas ~65 líneas duplicadas de `_build_features_for_row`).
+
+#### Features Nuevas (+4, total: 31)
+- **Momentum** (3 features): `momentum_a`, `momentum_b`, `momentum_diff` — tendencia de rendimiento en últimos 3 mundiales, ponderada por recencia. `MomentumTracker` acepta `df` como parámetro para evitar data leakage en entrenamiento.
+- **Ambiente** (1 feature): `env_score` — factor compuesto por altitud (30%), clima (25%), días de descanso (25%) y distancia de viaje (20%).
+
+#### Ensemble en la GUI
+- `predictor_view.py` ahora usa `EnsemblePredictor` (LR + RF 200 + GB 150 con soft voting) en lugar de `LogisticPredictor`.
+
+### Corregido
+
+- **Bug en Monte Carlo**: `round_of_32_pct` siempre era 0% por desempaquetar mal los qualifiers (usaba group_name en lugar de team_name).
+- **Data leakage en Momentum**: `MomentumTracker` usaba `load_matches()` internamente ignorando el `past_df` del entrenamiento cronológico.
+
+### Modificado
+
+- **engine/stats.py**: `FEATURE_NAMES` actualizado a 31 nombres. `build_feature_vector()` integra momentum y environment.
+- **engine/momentum.py**: Constructor acepta `df` opcional para entrenamiento sin leakage.
+- **engine/montecarlo.py**: `_precompute_probs()` construye lookup table de probabilidades pairwise. `_get_probs()` usa lookup antes de cache. `run()` paralelizado con fallback secuencial.
+- **engine/backtesting.py**: Eliminada `_build_features_for_row()`. Usa `build_feature_vector()` de stats.py con `clear_live_teams_form()` antes del entrenamiento.
+- **engine/explainability.py**: `_get_cached_background()` con validación por `n_features_in_`.
+- **gui/predictor_view.py**: `EnsemblePredictor` + `ShapWorker(QThread)` con señal `result_ready`. Model info muestra 31 features y "Ensemble (LR + RF + GB)".
+
 ## [2.1.0] — 2026-06
 
 ### Añadido

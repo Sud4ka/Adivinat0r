@@ -8,7 +8,7 @@ from gui.theme import (
     BG, BG_CARD, TEXT_SECONDARY, TEXT_PRIMARY, BORDER, neon_label
 )
 from engine.stats import get_team_list, load_matches, load_teams
-from engine.predictor import LogisticPredictor
+from engine.predictor import EnsemblePredictor
 from engine.calibration import CalibrationTracker
 from engine.translate import team_es, team_en, stage_es, get_team_list_es, UI_ES
 
@@ -18,7 +18,7 @@ class PredictorScreen(QWidget):
 
     def __init__(self, parent=None):
         super().__init__(parent)
-        self.predictor = LogisticPredictor()
+        self.predictor = EnsemblePredictor()
         self.team_list_en = get_team_list()
         self.team_list_es = get_team_list_es()
         self.teams = load_teams()
@@ -208,9 +208,9 @@ class PredictorScreen(QWidget):
         model_layout = QVBoxLayout(model_group)
         self.model_info = QLabel(
             f'<span style="color:{TEXT_SECONDARY};font-size:11px;">'
-            "Algoritmo: Regresión Logística<br>"
+            "Algoritmo: Ensemble (LR + RF + GB)<br>"
             "Entrenamiento: -- muestras<br>"
-            "Características: 13 activas<br>"
+            "Características: 31 activas<br>"
             "Calibración: --</span>"
         )
         self.model_info.setWordWrap(True)
@@ -308,39 +308,59 @@ class PredictorScreen(QWidget):
         except Exception:
             pass
 
-        try:
-            from engine.stats import FEATURE_NAMES, load_matches, build_feature_vector
-            df = load_matches()
-            fv = build_feature_vector(df, ta, tb, stage)
-            from engine.explainability import explain_prediction
-            if hasattr(self.predictor, 'model') and hasattr(self.predictor, 'scaler'):
-                explanation = explain_prediction(self.predictor.model, self.predictor.scaler, fv)
-                if "error" not in explanation:
-                    top_class = 0 if win_a > max(draw, win_b) else (1 if draw > win_b else 2)
-                    class_label = {0: ta_es, 1: "Empate", 2: tb_es}.get(top_class, ta_es)
-                    pos = explanation.get(top_class, {}).get("top_positive", [])
-                    neg = explanation.get(top_class, {}).get("top_negative", [])
-                    lines = [f"Factores a favor de {class_label}:"]
-                    for name, val in pos[:3]:
-                        lines.append(f"  + {name}: {val:+.3f}")
-                    if neg:
-                        lines.append(f"Factores en contra:")
-                        for name, val in neg[:3]:
-                            lines.append(f"  - {name}: {val:+.3f}")
-                    factors_text = "<br>".join(lines)
-                else:
-                    factors_text = explanation["error"]
-            else:
-                factors_text = "SHAP no disponible para este predictor"
-        except Exception:
-            factors_text = (
-                f"H2H: {ta_es} {result.get(f'{ta}_win', 0)*100:.0f}% vs {tb_es} {result.get(f'{ta}_loss', 0)*100:.0f}%<br>"
-                f"Momentum: {'Activo' if self.feature_toggles['momentum'] else 'Inactivo'}<br>"
-                f"Ambiente: {'Activo' if self.feature_toggles['environmental'] else 'Inactivo'}<br>"
-                f"Fase: {stage_es(stage)}<br>"
-                f"Confianza: {max(win_a, draw, win_b):.1f}%"
-            )
-        self.factors_label.setText(factors_text)
+        from PyQt6.QtCore import QThread, pyqtSignal
+
+        class ShapWorker(QThread):
+            result_ready = pyqtSignal(str)
+
+            def __init__(self, predictor, ta, tb, stage, ta_es, tb_es, win_a, draw, win_b):
+                super().__init__()
+                self.predictor = predictor
+                self.ta = ta
+                self.tb = tb
+                self.stage = stage
+                self.ta_es = ta_es
+                self.tb_es = tb_es
+                self.win_a = win_a
+                self.draw = draw
+                self.win_b = win_b
+
+            def run(self):
+                try:
+                    from engine.stats import FEATURE_NAMES, load_matches, build_feature_vector
+                    df = load_matches()
+                    fv = build_feature_vector(df, self.ta, self.tb, self.stage)
+                    from engine.explainability import explain_prediction
+                    if hasattr(self.predictor, 'model') and hasattr(self.predictor, 'scaler'):
+                        explanation = explain_prediction(self.predictor.model, self.predictor.scaler, fv)
+                        if "error" not in explanation:
+                            top_class = 0 if self.win_a > max(self.draw, self.win_b) else (1 if self.draw > self.win_b else 2)
+                            class_label = {0: self.ta_es, 1: "Empate", 2: self.tb_es}.get(top_class, self.ta_es)
+                            pos = explanation.get(top_class, {}).get("top_positive", [])
+                            neg = explanation.get(top_class, {}).get("top_negative", [])
+                            lines = [f"Factores a favor de {class_label}:"]
+                            for name, val in pos[:3]:
+                                lines.append(f"  + {name}: {val:+.3f}")
+                            if neg:
+                                lines.append(f"Factores en contra:")
+                                for name, val in neg[:3]:
+                                    lines.append(f"  - {name}: {val:+.3f}")
+                            factors_text = "<br>".join(lines)
+                        else:
+                            factors_text = explanation["error"]
+                    else:
+                        factors_text = "SHAP no disponible para este predictor"
+                except Exception:
+                    factors_text = "SHAP no disponible"
+                self.result_ready.emit(factors_text)
+
+        self._shap_worker = ShapWorker(
+            self.predictor, ta, tb, stage, ta_es, tb_es, win_a, draw, win_b
+        )
+        self._shap_worker.result_ready.connect(self._on_shap_ready)
+        self._shap_worker.start()
+
+        self.factors_label.setText("Calculando factores SHAP...")
 
         brier = self.calibration.get_brier_score()
         acc = self.calibration.get_accuracy()
@@ -349,9 +369,9 @@ class PredictorScreen(QWidget):
         n_matches = len(self.df)
         self.model_info.setText(
             f'<span style="color:{TEXT_SECONDARY};font-size:11px;">'
-            f"Algoritmo: Regresión Logística<br>"
+            f"Algoritmo: Ensemble (LR + RF + GB)<br>"
             f"Entrenamiento: {n_matches} muestras<br>"
-            f"Características: 27<br>"
+            f"Características: 31<br>"
             f"Precisión: {acc}%  |  Brier: {brier:.3f}<br>"
             f"Log Loss: {logloss:.3f}  |  ECE: {ece:.3f}</span>"
         )
@@ -359,3 +379,6 @@ class PredictorScreen(QWidget):
         self.result_group.setVisible(True)
         self.predict_btn.setText(UI_ES["pred_run"])
         self.predict_btn.setEnabled(True)
+
+    def _on_shap_ready(self, factors_text):
+        self.factors_label.setText(factors_text)

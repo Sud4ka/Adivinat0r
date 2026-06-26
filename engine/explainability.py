@@ -7,12 +7,30 @@ FEATURE_NAMES = STATS_FEATURE_NAMES
 
 TOP_K = 5
 
+_background_cache = None
+_bg_n_features = None
+
+
+def _get_cached_background(scaler, n_samples=80):
+    global _background_cache, _bg_n_features
+    n_features = scaler.n_features_in_ if hasattr(scaler, 'n_features_in_') else None
+    if _background_cache is not None and _bg_n_features == n_features:
+        return _background_cache
+    _bg_n_features = n_features
+    _background_cache = _sample_background(scaler, n_samples)
+    return _background_cache
+
+
+def invalidate_background_cache():
+    global _background_cache
+    _background_cache = None
+
 
 def explain_prediction(model, scaler, feature_vector: np.ndarray) -> dict:
     feature_vector_2d = feature_vector.reshape(1, -1)
     feature_vector_scaled = scaler.transform(feature_vector_2d)
 
-    background = _sample_background(scaler, n_samples=80)
+    background = _get_cached_background(scaler, n_samples=80)
     if background is None:
         return {"error": "No se pudo generar explicación"}
 

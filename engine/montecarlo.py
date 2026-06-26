@@ -1,7 +1,11 @@
 import random
 import numpy as np
 from collections import defaultdict
-from engine.stats import load_fixtures_2026, load_teams
+from concurrent.futures import ThreadPoolExecutor, as_completed
+import os
+from engine.stats import load_fixtures_2026, load_teams, compute_attack_defense_factors
+
+NUM_WORKERS = min(8, os.cpu_count() or 4)
 
 
 class MonteCarloSimulator:
@@ -11,31 +15,123 @@ class MonteCarloSimulator:
         self.teams = load_teams()
         self.num_simulations = num_simulations
         self.results = None
-        self._probs_cache = {}
-        self._factors = {}
+        self._factors = compute_attack_defense_factors()
+        self._probs_lookup = {}
+
+    def _precompute_probs(self):
+        if self._probs_lookup:
+            return
+        teams = []
+        for g in self.fixtures["groups"].values():
+            teams.extend(g)
+        teams = list(set(teams))
+        for i in range(len(teams)):
+            for j in range(i + 1, len(teams)):
+                a, b = teams[i], teams[j]
+                try:
+                    r = self.predictor.predict_proba(a, b, "Group Stage")
+                    self._probs_lookup[(a, b)] = (
+                        r.get(f"{a}_win", 0.33),
+                        r.get(f"{a}_draw", 0.33),
+                    )
+                    self._probs_lookup[(b, a)] = (
+                        r.get(f"{a}_loss", 0.33),
+                        r.get(f"{a}_draw", 0.33),
+                    )
+                except Exception:
+                    self._probs_lookup[(a, b)] = (0.33, 0.33)
+                    self._probs_lookup[(b, a)] = (0.33, 0.33)
 
     def run(self):
-        counts = defaultdict(lambda: defaultdict(int))
+        if self.predictor is not None:
+            self._precompute_probs()
 
-        for sim_idx in range(self.num_simulations):
-            standings = self._simulate_group_stage()
+        if self.num_simulations <= 100 or self.predictor is None:
+            return self._run_sequential()
+
+        chunk_size = max(100, self.num_simulations // NUM_WORKERS)
+        chunks = []
+        remaining = self.num_simulations
+        while remaining > 0:
+            n = min(chunk_size, remaining)
+            chunks.append(n)
+            remaining -= n
+
+        from threading import Lock
+        results_lock = Lock()
+        aggregated = defaultdict(lambda: defaultdict(int))
+
+        def _sim_chunk(n_sims, seed_offset):
+            local_cache = {}
+            local_counts = defaultdict(lambda: defaultdict(int))
+            rng = random.Random(seed_offset)
+
+            for _ in range(n_sims):
+                standings = self._simulate_group_stage(local_cache, rng)
+                qualifiers = self._get_qualifiers(standings)
+                champion = self._simulate_knockout(qualifiers, local_cache, rng)
+
+                for group_name, sorted_teams in standings.items():
+                    for rank, (team, _, _, _) in enumerate(sorted_teams):
+                        if rank == 0:
+                            local_counts[team]["group_winner"] += 1
+                        elif rank == 1:
+                            local_counts[team]["group_runner"] += 1
+
+                for _, team_name in qualifiers:
+                    local_counts[team_name]["round_of_32"] += 1
+
+                local_counts[champion]["champion"] += 1
+
+            return dict(local_counts)
+
+        with ThreadPoolExecutor(max_workers=NUM_WORKERS) as executor:
+            futures = []
+            for i, n in enumerate(chunks):
+                futures.append(executor.submit(_sim_chunk, n, i * 10000))
+
+            for future in as_completed(futures):
+                chunk_counts = future.result()
+                with results_lock:
+                    for team, data in chunk_counts.items():
+                        for k, v in data.items():
+                            aggregated[team][k] += v
+
+        self.results = {}
+        for team, data in aggregated.items():
+            self.results[team] = {
+                "champion_pct": (data["champion"] / self.num_simulations) * 100,
+                "group_winner_pct": (data.get("group_winner", 0) / self.num_simulations) * 100,
+                "group_runner_pct": (data.get("group_runner", 0) / self.num_simulations) * 100,
+                "round_of_32_pct": (data.get("round_of_32", 0) / self.num_simulations) * 100,
+            }
+
+        return self.results
+
+    def _run_sequential(self):
+        cache = {}
+        rng = random.Random(42)
+        aggregated = defaultdict(lambda: defaultdict(int))
+
+        for _ in range(self.num_simulations):
+            standings = self._simulate_group_stage(cache, rng)
             qualifiers = self._get_qualifiers(standings)
-            champion = self._simulate_knockout(qualifiers)
+            champion = self._simulate_knockout(qualifiers, cache, rng)
 
             for group_name, sorted_teams in standings.items():
                 for rank, (team, _, _, _) in enumerate(sorted_teams):
                     if rank == 0:
-                        counts[team]["group_winner"] += 1
+                        aggregated[team]["group_winner"] += 1
                     elif rank == 1:
-                        counts[team]["group_runner"] += 1
+                        aggregated[team]["group_runner"] += 1
 
-            for team_name, _ in qualifiers:
-                counts[team_name]["round_of_32"] += 1
+            for _, team_name in qualifiers:
+                aggregated[team_name]["round_of_32"] += 1
 
-            counts[champion]["champion"] += 1
+            aggregated[champion]["champion"] += 1
 
         self.results = {}
-        for team, data in counts.items():
+        for team, data in aggregated.items():
             self.results[team] = {
                 "champion_pct": (data["champion"] / self.num_simulations) * 100,
                 "group_winner_pct": (data.get("group_winner", 0) / self.num_simulations) * 100,
@@ -50,10 +146,14 @@ class MonteCarloSimulator:
             return []
         return sorted(self.results.items(), key=lambda x: x[1]["champion_pct"], reverse=True)
 
-    def _get_probs(self, team_a, team_b):
+    def _get_probs(self, team_a, team_b, cache):
+        if self._probs_lookup:
+            pair = (team_a, team_b)
+            if pair in self._probs_lookup:
+                return self._probs_lookup[pair]
         key = (team_a, team_b)
-        if key in self._probs_cache:
-            return self._probs_cache[key]
+        if key in cache:
+            return cache[key]
         try:
             if self.predictor:
                 r = self.predictor.predict_proba(team_a, team_b, "Group Stage")
@@ -63,10 +163,10 @@ class MonteCarloSimulator:
                 a, d = 0.33, 0.33
         except Exception:
             a, d = 0.33, 0.33
-        self._probs_cache[key] = (a, d)
+        cache[key] = (a, d)
         return a, d
 
-    def _simulate_group_stage(self):
+    def _simulate_group_stage(self, cache, rng):
         groups = self.fixtures["groups"]
         standings = {}
         for group_name, teams_in_group in groups.items():
@@ -76,7 +176,7 @@ class MonteCarloSimulator:
             for i in range(len(teams_in_group)):
                 for j in range(i + 1, len(teams_in_group)):
                     ta, tb = teams_in_group[i], teams_in_group[j]
-                    ga, gb = self._pick_score(ta, tb)
+                    ga, gb = self._pick_score(ta, tb, cache, rng)
                     gs[ta] += ga
                     gs[tb] += gb
                     gd[ta] += ga - gb
@@ -92,20 +192,15 @@ class MonteCarloSimulator:
             standings[group_name] = [(t, points[t], gs[t], gd[t]) for t in sorted_teams]
         return standings
 
-    def _pick_score(self, team_a, team_b):
-        a_win, draw = self._get_probs(team_a, team_b)
-        r = random.random()
+    def _pick_score(self, team_a, team_b, cache, rng):
+        a_win, draw = self._get_probs(team_a, team_b, cache)
+        r = rng.random()
         if r < a_win:
             outcome = 0
         elif r < a_win + draw:
             outcome = 1
         else:
             outcome = 2
-
-        if not self._factors:
-            from engine.stats import compute_attack_defense_factors, load_matches
-            df = load_matches()
-            self._factors = compute_attack_defense_factors(df)
 
         league_avg = 1.35
         fa = self._factors.get(team_a, {"attack": 1.0, "defense": 1.0})
@@ -136,22 +231,22 @@ class MonteCarloSimulator:
         best_third = third[:8]
         return winners + runners + [(t[0], t[1]) for t in best_third]
 
-    def _simulate_knockout(self, qualifiers):
+    def _simulate_knockout(self, qualifiers, cache, rng):
         teams = [t[1] for t in qualifiers]
-        random.shuffle(teams)
+        rng.shuffle(teams)
         while len(teams) > 1:
             next_round = []
             for i in range(0, len(teams) - 1, 2):
                 if i + 1 >= len(teams):
                     next_round.append((teams[i], teams[i]))
                     continue
-                ga, gb = self._pick_score(teams[i], teams[i + 1])
+                ga, gb = self._pick_score(teams[i], teams[i + 1], cache, rng)
                 if ga > gb:
                     next_round.append((teams[i], teams[i]))
                 elif gb > ga:
                     next_round.append((teams[i + 1], teams[i + 1]))
                 else:
-                    if random.random() < 0.5:
+                    if rng.random() < 0.5:
                         next_round.append((teams[i], teams[i]))
                     else:
                         next_round.append((teams[i + 1], teams[i + 1]))

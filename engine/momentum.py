@@ -1,10 +1,12 @@
 import numpy as np
-from engine.stats import load_matches, compute_team_stats
 
 
 class MomentumTracker:
-    def __init__(self):
-        self.df = load_matches()
+    def __init__(self, df=None):
+        if df is None:
+            from engine.stats import load_matches
+            df = load_matches()
+        self.df = df
 
     def get_momentum(self, team: str) -> float:
         team_matches = self.df[

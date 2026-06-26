@@ -5,87 +5,12 @@ import pandas as pd
 from sklearn.metrics import accuracy_score, precision_recall_fscore_support, brier_score_loss, log_loss
 
 from engine.stats import (
-    load_matches, get_stage_coefficient, get_continent, _load_power_rankings,
-    load_player_power, _compute_cumulative_ranking
+    load_matches, build_feature_vector,
 )
 
 DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data")
 BACKTEST_PATH = os.path.join(DATA_DIR, "backtest_results.json")
 TEMPORAL_DECAY_FACTOR = 0.94
-
-
-def _build_features_for_row(df, row, mask, cumulative_elo=None, max_year=2022):
-    team_a = row["home_team"]
-    team_b = row["away_team"]
-    stage = row["stage"]
-    host = row["host"]
-
-    submask = mask
-    past_df = df[submask]
-
-    from engine.stats import compute_h2h, compute_team_stats
-    h2h = compute_h2h(past_df, team_a, team_b)
-    stats_a = compute_team_stats(past_df, team_a)
-    stats_b = compute_team_stats(past_df, team_b)
-    stage_coeff = get_stage_coefficient(stage)
-    continent_a = get_continent(team_a)
-    continent_b = get_continent(team_b)
-
-    ranking_a = _compute_cumulative_ranking(past_df, team_a)
-    ranking_b = _compute_cumulative_ranking(past_df, team_b)
-    ranking_delta = ranking_a - ranking_b
-
-    home_continent_adv = 1.0 if host and continent_a == get_continent(host) else 0.0
-
-    pr = _load_power_rankings()
-    pr_a = pr.get(team_a, {})
-    pr_b = pr.get(team_b, {})
-    attack_a = pr_a.get("attack", 0)
-    attack_b = pr_b.get("attack", 0)
-    creat_a = pr_a.get("creativity", 0)
-    creat_b = pr_b.get("creativity", 0)
-    def_a = pr_a.get("defense", 0)
-    def_b = pr_b.get("defense", 0)
-
-    features = np.array([
-        h2h["team_a_wins"] / (h2h["played"] + 1),
-        h2h["team_b_wins"] / (h2h["played"] + 1),
-        h2h["draws"] / (h2h["played"] + 1),
-        stats_a["avg_goals_scored"],
-        stats_a["avg_goals_conceded"],
-        stats_b["avg_goals_scored"],
-        stats_b["avg_goals_conceded"],
-        stats_a["win_rate"],
-        stats_b["win_rate"],
-        stage_coeff,
-        ranking_delta / 1000.0,
-        home_continent_adv,
-        1.0 if continent_a == continent_b else 0.0,
-        attack_a - attack_b,
-        creat_a - creat_b,
-        def_a - def_b,
-    ])
-
-    pp = load_player_power()
-    pp_a = float(pp.get(team_a, 0))
-    pp_b = float(pp.get(team_b, 0))
-    pp_max = max(pp_a, pp_b, 1.0)
-    pp_features = np.array([pp_a / pp_max, pp_b / pp_max, (pp_a - pp_b) / pp_max])
-    features = np.concatenate([features, pp_features])
-
-    if cumulative_elo is not None:
-        from engine.elo import get_elo_features
-        elo_feats = get_elo_features(team_a, team_b, cumulative_elo)
-    else:
-        from engine.elo import load_elo_ratings, compute_all_elo
-        ratings = load_elo_ratings()
-        if not ratings:
-            ratings = compute_all_elo()
-        from engine.elo import get_elo_features
-        elo_feats = get_elo_features(team_a, team_b, ratings)
-    features = np.concatenate([features, elo_feats])
-
-    return features
 
 
 def walk_forward_validation() -> dict:
@@ -109,11 +34,19 @@ def walk_forward_validation() -> dict:
         sw_train = []
         cumulative_elo = {}
 
+        from engine.stats import clear_live_teams_form
+        clear_live_teams_form()
+
         train_indices = df[train_mask].index
         for idx in train_indices:
             row = df.loc[idx]
             past_mask = df.index < idx
-            feats = _build_features_for_row(df, row, past_mask, cumulative_elo, max_year_total)
+            past_df = df[past_mask]
+            feats = build_feature_vector(
+                past_df, row["home_team"], row["away_team"],
+                row["stage"], row["host"],
+                cumulative_elo=cumulative_elo,
+            )
             X_train.append(feats)
             if row["home_goals"] > row["away_goals"]:
                 y_train.append(0)
@@ -163,7 +96,12 @@ def walk_forward_validation() -> dict:
         for idx in test_indices:
             row = df.loc[idx]
             past_mask = df.index < idx
-            feats = _build_features_for_row(df, row, past_mask, cumulative_elo_test, max_year_total)
+            past_df = df[past_mask]
+            feats = build_feature_vector(
+                past_df, row["home_team"], row["away_team"],
+                row["stage"], row["host"],
+                cumulative_elo=cumulative_elo_test,
+            )
             X_test.append(feats)
             if row["home_goals"] > row["away_goals"]:
                 y_test.append(0)
